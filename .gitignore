@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+scraper.log
+
+# Cache
+.pytest_cache/
+.cache/
+
+# Selenium / WebDriver Manager
+.wdm/
+
+# Environment Variables
+.env
+
+# Windows
+Thumbs.db
+Desktop.ini
