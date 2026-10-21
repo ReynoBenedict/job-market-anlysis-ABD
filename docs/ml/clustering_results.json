@@ -1,0 +1,1334 @@
+{
+  "dataset": {
+    "file": "data\\raw\\glints_jobs.csv",
+    "rows": 1133
+  },
+  "original_empty_token_rows": 220,
+  "configurations": {
+    "original": [
+      {
+        "k": 3,
+        "silhouette_cosine_mean": 0.06561101638149215,
+        "silhouette_cosine_sd": 0.02598838874027498,
+        "silhouette_sq_euclidean_mean": -0.007417961302101645,
+        "seed_stability_ari_mean": 0.26172028056893987,
+        "seed_stability_ari_min": -0.09230773595808964,
+        "largest_cluster_share_mean": 0.7961165048543689,
+        "nmi_vs_role_families_mean": 0.158152643528246,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.035097793061765116,
+            "silhouette_cosine": 0.03303308449686796,
+            "largest_cluster_share": 0.8358340688437775,
+            "sizes": [
+              947,
+              123,
+              63
+            ],
+            "nmi_vs_role_families": 0.07037992633961423
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.06507318565264672,
+            "silhouette_cosine": 0.058937241796526374,
+            "largest_cluster_share": 0.8314210061782877,
+            "sizes": [
+              942,
+              133,
+              58
+            ],
+            "nmi_vs_role_families": 0.12654824523550726
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": -0.02600554163594432,
+            "silhouette_cosine": 0.08509159735740124,
+            "largest_cluster_share": 0.7290379523389232,
+            "sizes": [
+              826,
+              216,
+              91
+            ],
+            "nmi_vs_role_families": 0.2527663651965952
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": -0.04441806325397874,
+            "silhouette_cosine": 0.09808842220686502,
+            "largest_cluster_share": 0.7590467784642542,
+            "sizes": [
+              860,
+              184,
+              89
+            ],
+            "nmi_vs_role_families": 0.23967674522514315
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": -0.066837180334997,
+            "silhouette_cosine": 0.05290473604980018,
+            "largest_cluster_share": 0.8252427184466019,
+            "sizes": [
+              935,
+              126,
+              72
+            ],
+            "nmi_vs_role_families": 0.10139193564437024
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "silhouette_cosine_mean": 0.06334720097510141,
+        "silhouette_cosine_sd": 0.013010951656906328,
+        "silhouette_sq_euclidean_mean": 0.029548606014980973,
+        "seed_stability_ari_mean": 0.10461258714804134,
+        "seed_stability_ari_min": -0.09610790610998411,
+        "largest_cluster_share_mean": 0.7980582524271845,
+        "nmi_vs_role_families_mean": 0.17580390542981336,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.024536567971021554,
+            "silhouette_cosine": 0.054865348806505794,
+            "largest_cluster_share": 0.7766990291262136,
+            "sizes": [
+              880,
+              115,
+              75,
+              63
+            ],
+            "nmi_vs_role_families": 0.17651373159663075
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": -0.0758271574353483,
+            "silhouette_cosine": 0.07168385687745277,
+            "largest_cluster_share": 0.9214474845542807,
+            "sizes": [
+              1044,
+              30,
+              30,
+              29
+            ],
+            "nmi_vs_role_families": 0.19709468780313502
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": -0.02027595249084992,
+            "silhouette_cosine": 0.07471332781028171,
+            "largest_cluster_share": 0.7175639894086496,
+            "sizes": [
+              813,
+              214,
+              91,
+              15
+            ],
+            "nmi_vs_role_families": 0.2571273775532121
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": -0.020314110479258143,
+            "silhouette_cosine": 0.07084311435866078,
+            "largest_cluster_share": 0.735216240070609,
+            "sizes": [
+              833,
+              144,
+              123,
+              33
+            ],
+            "nmi_vs_role_families": 0.1647032949355289
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.23962368250933969,
+            "silhouette_cosine": 0.044630357022606,
+            "largest_cluster_share": 0.8393645189761695,
+            "sizes": [
+              951,
+              114,
+              37,
+              31
+            ],
+            "nmi_vs_role_families": 0.08358043526056008
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "silhouette_cosine_mean": 0.053503757146750194,
+        "silhouette_cosine_sd": 0.032076123557735356,
+        "silhouette_sq_euclidean_mean": -0.04272603736321357,
+        "seed_stability_ari_mean": 0.08074714492799753,
+        "seed_stability_ari_min": -0.07781211539829072,
+        "largest_cluster_share_mean": 0.7842894969108561,
+        "nmi_vs_role_families_mean": 0.20313205005443746,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": -0.027323744518933706,
+            "silhouette_cosine": 0.04241337485179037,
+            "largest_cluster_share": 0.7987643424536628,
+            "sizes": [
+              905,
+              89,
+              76,
+              60,
+              3
+            ],
+            "nmi_vs_role_families": 0.23845173587953816
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": -0.08561271140821927,
+            "silhouette_cosine": 0.006593040659716012,
+            "largest_cluster_share": 0.8861429832303619,
+            "sizes": [
+              1004,
+              84,
+              30,
+              12,
+              3
+            ],
+            "nmi_vs_role_families": 0.15713012903558932
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.0115139227100156,
+            "silhouette_cosine": 0.08643647088301966,
+            "largest_cluster_share": 0.6910856134157105,
+            "sizes": [
+              783,
+              216,
+              91,
+              31,
+              12
+            ],
+            "nmi_vs_role_families": 0.2906277722568623
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": -0.02093438045744228,
+            "silhouette_cosine": 0.08005799444047065,
+            "largest_cluster_share": 0.736981465136805,
+            "sizes": [
+              835,
+              139,
+              81,
+              45,
+              33
+            ],
+            "nmi_vs_role_families": 0.1713575379096186
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": -0.0912732731414882,
+            "silhouette_cosine": 0.052017904898754276,
+            "largest_cluster_share": 0.8084730803177406,
+            "sizes": [
+              916,
+              113,
+              42,
+              32,
+              30
+            ],
+            "nmi_vs_role_families": 0.15809307519057897
+          }
+        ]
+      },
+      {
+        "k": 6,
+        "silhouette_cosine_mean": 0.07170970594534487,
+        "silhouette_cosine_sd": 0.04250428994491491,
+        "silhouette_sq_euclidean_mean": -0.044367745275659475,
+        "seed_stability_ari_mean": 0.15142171151972125,
+        "seed_stability_ari_min": -0.09934594167087522,
+        "largest_cluster_share_mean": 0.7445719329214475,
+        "nmi_vs_role_families_mean": 0.21232060559266086,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": -0.05990348269068104,
+            "silhouette_cosine": 0.03936460366371464,
+            "largest_cluster_share": 0.9055604589585172,
+            "sizes": [
+              1026,
+              33,
+              33,
+              30,
+              8,
+              3
+            ],
+            "nmi_vs_role_families": 0.13226726313822224
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": -0.04751438284670628,
+            "silhouette_cosine": 0.02395188989243752,
+            "largest_cluster_share": 0.7811120917917035,
+            "sizes": [
+              885,
+              128,
+              75,
+              30,
+              12,
+              3
+            ],
+            "nmi_vs_role_families": 0.15304745204840495
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.040310967325553865,
+            "silhouette_cosine": 0.123070332247514,
+            "largest_cluster_share": 0.5692850838481907,
+            "sizes": [
+              645,
+              205,
+              115,
+              78,
+              59,
+              31
+            ],
+            "nmi_vs_role_families": 0.3452141402835448
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": -0.0878494092701789,
+            "silhouette_cosine": 0.10667782272600172,
+            "largest_cluster_share": 0.6681376875551632,
+            "sizes": [
+              757,
+              143,
+              122,
+              48,
+              33,
+              30
+            ],
+            "nmi_vs_role_families": 0.23338885588509672
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": -0.06688241889628502,
+            "silhouette_cosine": 0.06548388119705646,
+            "largest_cluster_share": 0.7987643424536628,
+            "sizes": [
+              905,
+              124,
+              32,
+              30,
+              30,
+              12
+            ],
+            "nmi_vs_role_families": 0.19768531660803557
+          }
+        ]
+      },
+      {
+        "k": 8,
+        "silhouette_cosine_mean": 0.10250372624366957,
+        "silhouette_cosine_sd": 0.020597788458188906,
+        "silhouette_sq_euclidean_mean": 0.06088138648457274,
+        "seed_stability_ari_mean": 0.25433538495630637,
+        "seed_stability_ari_min": 0.027608643931912508,
+        "largest_cluster_share_mean": 0.6804942630185349,
+        "nmi_vs_role_families_mean": 0.2903409535963119,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.06357976161381997,
+            "silhouette_cosine": 0.11674601581282629,
+            "largest_cluster_share": 0.6769638128861429,
+            "sizes": [
+              767,
+              123,
+              86,
+              33,
+              33,
+              32,
+              30,
+              29
+            ],
+            "nmi_vs_role_families": 0.2432423515754366
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.1451986543237365,
+            "silhouette_cosine": 0.08539635685168277,
+            "largest_cluster_share": 0.76522506619594,
+            "sizes": [
+              867,
+              112,
+              63,
+              30,
+              29,
+              15,
+              13,
+              4
+            ],
+            "nmi_vs_role_families": 0.27756622245799295
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.03800211410272547,
+            "silhouette_cosine": 0.12736738816457624,
+            "largest_cluster_share": 0.6354810238305384,
+            "sizes": [
+              720,
+              214,
+              65,
+              33,
+              33,
+              31,
+              30,
+              7
+            ],
+            "nmi_vs_role_families": 0.38867490695091955
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.01589635913903695,
+            "silhouette_cosine": 0.0784392110000843,
+            "largest_cluster_share": 0.6019417475728155,
+            "sizes": [
+              682,
+              172,
+              124,
+              51,
+              37,
+              31,
+              30,
+              6
+            ],
+            "nmi_vs_role_families": 0.281331708209696
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.0417300432435448,
+            "silhouette_cosine": 0.10456965938917828,
+            "largest_cluster_share": 0.7228596646072374,
+            "sizes": [
+              819,
+              103,
+              53,
+              33,
+              32,
+              32,
+              31,
+              30
+            ],
+            "nmi_vs_role_families": 0.2608895787875145
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "silhouette_cosine_mean": 0.092550951946449,
+        "silhouette_cosine_sd": 0.019059249420178438,
+        "silhouette_sq_euclidean_mean": 0.05733420480076022,
+        "seed_stability_ari_mean": 0.32496766992079484,
+        "seed_stability_ari_min": 0.15851736299967248,
+        "largest_cluster_share_mean": 0.6783759929390998,
+        "nmi_vs_role_families_mean": 0.2904005778869182,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.05387549247067373,
+            "silhouette_cosine": 0.11020101410035964,
+            "largest_cluster_share": 0.6416593115622242,
+            "sizes": [
+              727,
+              115,
+              110,
+              45,
+              33,
+              32,
+              30,
+              30,
+              9,
+              2
+            ],
+            "nmi_vs_role_families": 0.27077939600627593
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.07464822998186262,
+            "silhouette_cosine": 0.11356547082698004,
+            "largest_cluster_share": 0.616946160635481,
+            "sizes": [
+              699,
+              124,
+              106,
+              68,
+              43,
+              31,
+              30,
+              15,
+              13,
+              4
+            ],
+            "nmi_vs_role_families": 0.36145719019288686
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.02570425728391619,
+            "silhouette_cosine": 0.08858141405509969,
+            "largest_cluster_share": 0.677846425419241,
+            "sizes": [
+              768,
+              118,
+              103,
+              33,
+              31,
+              30,
+              30,
+              13,
+              4,
+              3
+            ],
+            "nmi_vs_role_families": 0.293273510526237
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.09323471747074986,
+            "silhouette_cosine": 0.06879035718009965,
+            "largest_cluster_share": 0.7413945278022948,
+            "sizes": [
+              840,
+              115,
+              33,
+              32,
+              31,
+              30,
+              29,
+              13,
+              8,
+              2
+            ],
+            "nmi_vs_role_families": 0.23375583073303405
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.03920832679659871,
+            "silhouette_cosine": 0.08161650356970597,
+            "largest_cluster_share": 0.7140335392762577,
+            "sizes": [
+              809,
+              103,
+              53,
+              33,
+              33,
+              31,
+              30,
+              29,
+              8,
+              4
+            ],
+            "nmi_vs_role_families": 0.29273696197615723
+          }
+        ]
+      },
+      {
+        "k": 15,
+        "silhouette_cosine_mean": 0.1552852990969884,
+        "silhouette_cosine_sd": 0.02927315750725274,
+        "silhouette_sq_euclidean_mean": 0.09505260647382632,
+        "seed_stability_ari_mean": 0.2315444646225014,
+        "seed_stability_ari_min": 0.01517908136285305,
+        "largest_cluster_share_mean": 0.5514563106796116,
+        "nmi_vs_role_families_mean": 0.39950483091817435,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.08810819940524313,
+            "silhouette_cosine": 0.18227221075258718,
+            "largest_cluster_share": 0.5242718446601942,
+            "sizes": [
+              594,
+              104,
+              85,
+              73,
+              52,
+              32,
+              32,
+              30,
+              30,
+              29,
+              26,
+              26,
+              13,
+              4,
+              3
+            ],
+            "nmi_vs_role_families": 0.38811725345224307
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.1277333294498689,
+            "silhouette_cosine": 0.12646538247542458,
+            "largest_cluster_share": 0.6090026478375993,
+            "sizes": [
+              690,
+              125,
+              44,
+              42,
+              40,
+              32,
+              32,
+              30,
+              30,
+              21,
+              15,
+              14,
+              12,
+              3,
+              3
+            ],
+            "nmi_vs_role_families": 0.38473714765982747
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.08861120833065657,
+            "silhouette_cosine": 0.12063350361568421,
+            "largest_cluster_share": 0.587819947043248,
+            "sizes": [
+              666,
+              109,
+              81,
+              54,
+              42,
+              31,
+              31,
+              30,
+              30,
+              24,
+              15,
+              12,
+              4,
+              3,
+              1
+            ],
+            "nmi_vs_role_families": 0.35677513220113377
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.13137125212663173,
+            "silhouette_cosine": 0.17463962222264093,
+            "largest_cluster_share": 0.46954986760812,
+            "sizes": [
+              532,
+              152,
+              121,
+              60,
+              33,
+              32,
+              32,
+              32,
+              30,
+              29,
+              25,
+              25,
+              14,
+              13,
+              3
+            ],
+            "nmi_vs_role_families": 0.47948875049261735
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.03943904305673128,
+            "silhouette_cosine": 0.17241577641860512,
+            "largest_cluster_share": 0.5666372462488968,
+            "sizes": [
+              642,
+              100,
+              72,
+              52,
+              41,
+              35,
+              33,
+              32,
+              30,
+              30,
+              30,
+              22,
+              7,
+              4,
+              3
+            ],
+            "nmi_vs_role_families": 0.3884058707850501
+          }
+        ]
+      }
+    ],
+    "corrected": [
+      {
+        "k": 3,
+        "silhouette_cosine_mean": 0.0713647233580621,
+        "silhouette_cosine_sd": 0.020046681401181116,
+        "silhouette_sq_euclidean_mean": 0.07210133741136232,
+        "seed_stability_ari_mean": 0.16964833408543795,
+        "seed_stability_ari_min": -0.0797374188586063,
+        "largest_cluster_share_mean": 0.7751103265666373,
+        "nmi_vs_role_families_mean": 0.21606165563239443,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.04015294772016994,
+            "silhouette_cosine": 0.039309163993631706,
+            "largest_cluster_share": 0.9170344218887908,
+            "sizes": [
+              1039,
+              90,
+              4
+            ],
+            "nmi_vs_role_families": 0.09411352677258517
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.0717958317340486,
+            "silhouette_cosine": 0.07112574860309152,
+            "largest_cluster_share": 0.7299205648720212,
+            "sizes": [
+              827,
+              276,
+              30
+            ],
+            "nmi_vs_role_families": 0.2532878598831376
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.09517834395425209,
+            "silhouette_cosine": 0.09457180262469132,
+            "largest_cluster_share": 0.6037069726390115,
+            "sizes": [
+              684,
+              247,
+              202
+            ],
+            "nmi_vs_role_families": 0.297165024367465
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.07671862084762149,
+            "silhouette_cosine": 0.07587454087722943,
+            "largest_cluster_share": 0.8384819064430715,
+            "sizes": [
+              950,
+              107,
+              76
+            ],
+            "nmi_vs_role_families": 0.21256921930458414
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.07666094280071944,
+            "silhouette_cosine": 0.0759423606916665,
+            "largest_cluster_share": 0.7864077669902912,
+            "sizes": [
+              891,
+              203,
+              39
+            ],
+            "nmi_vs_role_families": 0.22317264783420024
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "silhouette_cosine_mean": 0.08386567011495409,
+        "silhouette_cosine_sd": 0.027730967276128397,
+        "silhouette_sq_euclidean_mean": 0.08467471181660341,
+        "seed_stability_ari_mean": 0.08741336040558742,
+        "seed_stability_ari_min": -0.10164012569888509,
+        "largest_cluster_share_mean": 0.7359223300970874,
+        "nmi_vs_role_families_mean": 0.2659751518284724,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.08587307603995399,
+            "silhouette_cosine": 0.08508334254110907,
+            "largest_cluster_share": 0.7210944395410415,
+            "sizes": [
+              817,
+              206,
+              79,
+              31
+            ],
+            "nmi_vs_role_families": 0.25872869137905924
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.04159698289282083,
+            "silhouette_cosine": 0.040752319882246604,
+            "largest_cluster_share": 0.9073256840247131,
+            "sizes": [
+              1028,
+              45,
+              30,
+              30
+            ],
+            "nmi_vs_role_families": 0.1380633815213463
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.11288515897317837,
+            "silhouette_cosine": 0.11215348507949736,
+            "largest_cluster_share": 0.556045895851721,
+            "sizes": [
+              630,
+              219,
+              202,
+              82
+            ],
+            "nmi_vs_role_families": 0.336945045810292
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.07878080495697938,
+            "silhouette_cosine": 0.07796143390994764,
+            "largest_cluster_share": 0.8155339805825242,
+            "sizes": [
+              924,
+              103,
+              76,
+              30
+            ],
+            "nmi_vs_role_families": 0.25930838040114873
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.10423753622008451,
+            "silhouette_cosine": 0.1033777691619698,
+            "largest_cluster_share": 0.6796116504854369,
+            "sizes": [
+              770,
+              224,
+              74,
+              65
+            ],
+            "nmi_vs_role_families": 0.3368302600305158
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "silhouette_cosine_mean": 0.10839896288801497,
+        "silhouette_cosine_sd": 0.03834441631706271,
+        "silhouette_sq_euclidean_mean": 0.10909781106314075,
+        "seed_stability_ari_mean": 0.15731125589048292,
+        "seed_stability_ari_min": -0.006268431728243671,
+        "largest_cluster_share_mean": 0.6499558693733452,
+        "nmi_vs_role_families_mean": 0.34082266083474405,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.12303031223928462,
+            "silhouette_cosine": 0.12234644925348845,
+            "largest_cluster_share": 0.6999117387466902,
+            "sizes": [
+              793,
+              177,
+              73,
+              60,
+              30
+            ],
+            "nmi_vs_role_families": 0.3314397558734441
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.04324276624998377,
+            "silhouette_cosine": 0.04239025725841424,
+            "largest_cluster_share": 0.909973521624007,
+            "sizes": [
+              1031,
+              30,
+              30,
+              30,
+              12
+            ],
+            "nmi_vs_role_families": 0.16387923487994183
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.14271338931891187,
+            "silhouette_cosine": 0.14203628502546514,
+            "largest_cluster_share": 0.5075022065313327,
+            "sizes": [
+              575,
+              202,
+              199,
+              83,
+              74
+            ],
+            "nmi_vs_role_families": 0.4312661683483169
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.11446675446543635,
+            "silhouette_cosine": 0.11384886262599503,
+            "largest_cluster_share": 0.4527802294792586,
+            "sizes": [
+              513,
+              438,
+              122,
+              30,
+              30
+            ],
+            "nmi_vs_role_families": 0.4128175884967961
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.12203583304208711,
+            "silhouette_cosine": 0.12137296027671199,
+            "largest_cluster_share": 0.6796116504854369,
+            "sizes": [
+              770,
+              201,
+              65,
+              60,
+              37
+            ],
+            "nmi_vs_role_families": 0.3647105565752212
+          }
+        ]
+      },
+      {
+        "k": 6,
+        "silhouette_cosine_mean": 0.11072558738584948,
+        "silhouette_cosine_sd": 0.01668237617363929,
+        "silhouette_sq_euclidean_mean": 0.1115056493924277,
+        "seed_stability_ari_mean": 0.07551401527411652,
+        "seed_stability_ari_min": -0.17880978978759282,
+        "largest_cluster_share_mean": 0.6656663724624889,
+        "nmi_vs_role_families_mean": 0.34714155025786364,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.10657756822043918,
+            "silhouette_cosine": 0.10580380591077049,
+            "largest_cluster_share": 0.7237422771403353,
+            "sizes": [
+              820,
+              113,
+              87,
+              79,
+              30,
+              4
+            ],
+            "nmi_vs_role_families": 0.32899431350801533
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.088079876643118,
+            "silhouette_cosine": 0.08723514470469934,
+            "largest_cluster_share": 0.8172992056487202,
+            "sizes": [
+              926,
+              74,
+              61,
+              30,
+              30,
+              12
+            ],
+            "nmi_vs_role_families": 0.23332451576375626
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.12825419267059807,
+            "silhouette_cosine": 0.12747346527479256,
+            "largest_cluster_share": 0.5066195939982348,
+            "sizes": [
+              574,
+              221,
+              175,
+              74,
+              64,
+              25
+            ],
+            "nmi_vs_role_families": 0.3976376748849944
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.10767841281446426,
+            "silhouette_cosine": 0.10684534660106115,
+            "largest_cluster_share": 0.7616946160635482,
+            "sizes": [
+              863,
+              64,
+              64,
+              60,
+              52,
+              30
+            ],
+            "nmi_vs_role_families": 0.35073533761831205
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.12693819661351902,
+            "silhouette_cosine": 0.12627017443792382,
+            "largest_cluster_share": 0.5189761694616064,
+            "sizes": [
+              588,
+              200,
+              141,
+              101,
+              65,
+              38
+            ],
+            "nmi_vs_role_families": 0.42501590951424
+          }
+        ]
+      },
+      {
+        "k": 8,
+        "silhouette_cosine_mean": 0.135044065667464,
+        "silhouette_cosine_sd": 0.016044350546944225,
+        "silhouette_sq_euclidean_mean": 0.13586045632203303,
+        "seed_stability_ari_mean": 0.08580201838042932,
+        "seed_stability_ari_min": -0.04437407184473392,
+        "largest_cluster_share_mean": 0.6197705207413945,
+        "nmi_vs_role_families_mean": 0.40035241174278924,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.13870926774779208,
+            "silhouette_cosine": 0.13789145983535253,
+            "largest_cluster_share": 0.6540158870255958,
+            "sizes": [
+              741,
+              133,
+              62,
+              60,
+              47,
+              31,
+              30,
+              29
+            ],
+            "nmi_vs_role_families": 0.39548622442355
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.12646450999914388,
+            "silhouette_cosine": 0.12560126242405784,
+            "largest_cluster_share": 0.7634598411297441,
+            "sizes": [
+              865,
+              68,
+              61,
+              44,
+              33,
+              30,
+              26,
+              6
+            ],
+            "nmi_vs_role_families": 0.3258980600438714
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.11611662623169001,
+            "silhouette_cosine": 0.1152903773312661,
+            "largest_cluster_share": 0.649602824360106,
+            "sizes": [
+              736,
+              199,
+              65,
+              60,
+              30,
+              15,
+              14,
+              14
+            ],
+            "nmi_vs_role_families": 0.39074364407314527
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.13909391978707425,
+            "silhouette_cosine": 0.13834276298819473,
+            "largest_cluster_share": 0.4783759929390997,
+            "sizes": [
+              542,
+              228,
+              129,
+              114,
+              30,
+              30,
+              30,
+              30
+            ],
+            "nmi_vs_role_families": 0.4427673070541724
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.158917957844465,
+            "silhouette_cosine": 0.15809446575844882,
+            "largest_cluster_share": 0.5533980582524272,
+            "sizes": [
+              627,
+              137,
+              84,
+              73,
+              69,
+              69,
+              39,
+              35
+            ],
+            "nmi_vs_role_families": 0.4468668231192071
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "silhouette_cosine_mean": 0.18893434580132823,
+        "silhouette_cosine_sd": 0.03019372613300182,
+        "silhouette_sq_euclidean_mean": 0.18969070328790374,
+        "seed_stability_ari_mean": 0.13089817138728543,
+        "seed_stability_ari_min": 0.031367611275487664,
+        "largest_cluster_share_mean": 0.5209179170344219,
+        "nmi_vs_role_families_mean": 0.4863484297099017,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.21174348393558862,
+            "silhouette_cosine": 0.21095483133396348,
+            "largest_cluster_share": 0.5463371579876434,
+            "sizes": [
+              619,
+              101,
+              87,
+              82,
+              64,
+              59,
+              31,
+              30,
+              30,
+              30
+            ],
+            "nmi_vs_role_families": 0.5416730811719559
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.14151970288825955,
+            "silhouette_cosine": 0.14069386642328388,
+            "largest_cluster_share": 0.6893203883495146,
+            "sizes": [
+              781,
+              70,
+              67,
+              64,
+              40,
+              30,
+              30,
+              30,
+              14,
+              7
+            ],
+            "nmi_vs_role_families": 0.39224191706468753
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.21815464959742534,
+            "silhouette_cosine": 0.21748450961806978,
+            "largest_cluster_share": 0.31509267431597526,
+            "sizes": [
+              357,
+              218,
+              203,
+              79,
+              59,
+              56,
+              55,
+              45,
+              31,
+              30
+            ],
+            "nmi_vs_role_families": 0.5650715165882143
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.1856250930713971,
+            "silhouette_cosine": 0.18487339674323738,
+            "largest_cluster_share": 0.5101500441306267,
+            "sizes": [
+              578,
+              144,
+              90,
+              87,
+              84,
+              33,
+              30,
+              30,
+              30,
+              27
+            ],
+            "nmi_vs_role_families": 0.4725383685977716
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.19141058694684812,
+            "silhouette_cosine": 0.19066512488808657,
+            "largest_cluster_share": 0.5436893203883495,
+            "sizes": [
+              616,
+              133,
+              87,
+              76,
+              74,
+              37,
+              33,
+              33,
+              30,
+              14
+            ],
+            "nmi_vs_role_families": 0.4602172651268794
+          }
+        ]
+      },
+      {
+        "k": 15,
+        "silhouette_cosine_mean": 0.2637523368864215,
+        "silhouette_cosine_sd": 0.018576673035326365,
+        "silhouette_sq_euclidean_mean": 0.2644534923935143,
+        "seed_stability_ari_mean": 0.23467070382462785,
+        "seed_stability_ari_min": 0.07195631774360321,
+        "largest_cluster_share_mean": 0.3461606354810238,
+        "nmi_vs_role_families_mean": 0.5563461968819005,
+        "runs": [
+          {
+            "seed": 42,
+            "silhouette_sq_euclidean": 0.27813716806726996,
+            "silhouette_cosine": 0.27747723632579235,
+            "largest_cluster_share": 0.25507502206531335,
+            "sizes": [
+              289,
+              167,
+              117,
+              96,
+              91,
+              86,
+              51,
+              45,
+              38,
+              30,
+              30,
+              30,
+              30,
+              29,
+              4
+            ],
+            "nmi_vs_role_families": 0.616081924350308
+          },
+          {
+            "seed": 1,
+            "silhouette_sq_euclidean": 0.24459346645850397,
+            "silhouette_cosine": 0.24378414016491914,
+            "largest_cluster_share": 0.53045013239188,
+            "sizes": [
+              601,
+              66,
+              65,
+              52,
+              51,
+              38,
+              36,
+              34,
+              31,
+              30,
+              30,
+              30,
+              29,
+              25,
+              15
+            ],
+            "nmi_vs_role_families": 0.45149803632526936
+          },
+          {
+            "seed": 7,
+            "silhouette_sq_euclidean": 0.25872399052950384,
+            "silhouette_cosine": 0.25802986449349247,
+            "largest_cluster_share": 0.3609885260370697,
+            "sizes": [
+              409,
+              113,
+              105,
+              98,
+              71,
+              60,
+              55,
+              44,
+              43,
+              30,
+              30,
+              24,
+              22,
+              15,
+              14
+            ],
+            "nmi_vs_role_families": 0.5487674420854421
+          },
+          {
+            "seed": 123,
+            "silhouette_sq_euclidean": 0.28896375421136783,
+            "silhouette_cosine": 0.288295028660853,
+            "largest_cluster_share": 0.2594880847308032,
+            "sizes": [
+              294,
+              142,
+              93,
+              90,
+              84,
+              71,
+              71,
+              61,
+              54,
+              52,
+              30,
+              30,
+              30,
+              25,
+              6
+            ],
+            "nmi_vs_role_families": 0.6073015935350334
+          },
+          {
+            "seed": 2024,
+            "silhouette_sq_euclidean": 0.2518490827009259,
+            "silhouette_cosine": 0.2511754147870506,
+            "largest_cluster_share": 0.324801412180053,
+            "sizes": [
+              368,
+              141,
+              124,
+              84,
+              70,
+              65,
+              62,
+              50,
+              36,
+              35,
+              30,
+              30,
+              30,
+              6,
+              2
+            ],
+            "nmi_vs_role_families": 0.5580819881134494
+          }
+        ]
+      }
+    ]
+  },
+  "baseline_k3_seed42": {
+    "seed": 42,
+    "silhouette_sq_euclidean": 0.035097793061765116,
+    "silhouette_cosine": 0.03303308449686796,
+    "largest_cluster_share": 0.8358340688437775,
+    "sizes": [
+      947,
+      123,
+      63
+    ],
+    "nmi_vs_role_families": 0.07037992633961423
+  },
+  "runtime_seconds": 144.8
+}

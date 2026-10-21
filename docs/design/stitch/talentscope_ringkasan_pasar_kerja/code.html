@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed": "#00201c",
+            "inverse-surface": "#283044",
+            "on-tertiary-container": "#fefcff",
+            "tertiary": "#4e5d75",
+            "primary-container": "#008377",
+            "surface-container": "#eaedff",
+            "on-primary-container": "#f4fffc",
+            "primary-fixed": "#82f6e6",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#39475f",
+            "tertiary-container": "#67758f",
+            "outline-variant": "#bcc9c6",
+            "secondary-fixed-dim": "#b4c5ff",
+            "tertiary-fixed": "#d5e3ff",
+            "on-primary-fixed-variant": "#005048",
+            "surface-container-high": "#e2e7ff",
+            "primary-fixed-dim": "#63d9ca",
+            "on-surface-variant": "#3d4947",
+            "error": "#ba1a1a",
+            "secondary-container": "#316bf3",
+            "inverse-on-surface": "#eef0ff",
+            "outline": "#6d7a77",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#0051d5",
+            "background": "#faf8ff",
+            "secondary-fixed": "#dbe1ff",
+            "inverse-primary": "#63d9ca",
+            "surface-bright": "#faf8ff",
+            "surface-container-highest": "#dae2fd",
+            "tertiary-fixed-dim": "#b8c7e4",
+            "surface-variant": "#dae2fd",
+            "on-tertiary-fixed": "#0c1c32",
+            "on-secondary": "#ffffff",
+            "on-background": "#131b2e",
+            "surface-tint": "#006a61",
+            "primary": "#00685e",
+            "on-tertiary": "#ffffff",
+            "surface": "#faf8ff",
+            "on-secondary-fixed-variant": "#003ea8",
+            "on-surface": "#131b2e",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#00174b",
+            "surface-dim": "#d2d9f4",
+            "surface-container-low": "#f2f3ff",
+            "on-secondary-container": "#fefcff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "space-sm": "0.5rem",
+            "space-xl": "2.25rem",
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin-tablet": "1.5rem",
+            "margin-desktop": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.25rem"
+          },
+          fontFamily: {
+            "metadata-label": ["Inter"],
+            "display-lg": ["Geist"],
+            "title-section": ["Geist"],
+            "body-compact": ["Inter"],
+            "body-semibold": ["Inter"],
+            "title-page": ["Geist"],
+            "kpi-metric-mobile": ["Geist"],
+            "body-default": ["Inter"],
+            "kpi-metric": ["Geist"],
+            "display-lg-mobile": ["Geist"],
+            "data-mono": ["JetBrains Mono"]
+          },
+          fontSize: {
+            "metadata-label": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "title-section": ["18px", { lineHeight: "26px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-compact": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-semibold": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "600" }],
+            "title-page": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "kpi-metric-mobile": ["24px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "700" }],
+            "body-default": ["15px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }],
+            "kpi-metric": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "data-mono": ["13px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-default text-on-surface antialiased">
+<!-- SIDEBAR TERPADU LOKALISASI -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-r border-surface-container">
+<!-- Brand Logo & Nama -->
+<div class="h-16 px-space-lg flex items-center justify-between border-b border-surface-container flex-shrink-0">
+<a class="flex items-center gap-2.5" data-path="overview" href="#">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-title-section font-bold text-base shadow-sm">
+          TS
+        </div>
+<span class="font-title-section text-title-section text-on-surface tracking-tight font-bold">TalentScope</span>
+</a>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-metadata-label font-semibold tracking-wider uppercase bg-primary-fixed text-on-primary-fixed-variant">Pro</span>
+</div>
+<!-- Navigasi Menu Sidebar -->
+<div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-md">
+<!-- Kelompok RINGKASAN -->
+<div class="space-y-space-xs">
+<div class="px-space-sm py-1 font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Ringkasan</div>
+<nav class="space-y-0.5">
+<a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 bg-primary-container text-on-primary-container font-semibold rounded-xl transition-colors shadow-sm" data-path="overview" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-body-compact text-body-compact">Ringkasan Pasar Kerja</span>
+</a>
+</nav>
+</div>
+<!-- Kelompok JELAJAHI -->
+<div class="space-y-space-xs">
+<div class="px-space-sm py-1 font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Jelajahi</div>
+<nav class="space-y-0.5">
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="explore-jobs" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Cari Lowongan</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="market-intelligence" href="#">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+<span>Analisis Pasar</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="skill-intelligence" href="#">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+<span>Analisis Keterampilan</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="salary-insights" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span>Analisis Gaji</span>
+</a>
+</nav>
+</div>
+<!-- Kelompok KARIER SAYA -->
+<div class="space-y-space-xs">
+<div class="px-space-sm py-1 font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Karier Saya</div>
+<nav class="space-y-0.5">
+<a class="flex items-center justify-between px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="career-match" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]">adjust</span>
+<span>Kecocokan Karier</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-metadata-label font-semibold bg-secondary-fixed text-on-secondary-fixed-variant">Baru</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="saved-jobs" href="#">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+<span>Lowongan Tersimpan</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-profile" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span>Profil Saya</span>
+</a>
+</nav>
+</div>
+<!-- Kelompok SISTEM & ADMIN -->
+<div class="space-y-space-xs">
+<div class="px-space-sm py-1 font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Sistem &amp; Admin</div>
+<nav class="space-y-0.5">
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span>Pengaturan</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-pipelines" href="#">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+<span>Pipeline Data</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl font-body-compact text-body-compact text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-quality" href="#">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Kualitas Data</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Status Data & Footer Profil Sidebar -->
+<div class="p-space-sm border-t border-surface-container space-y-space-sm bg-surface-container-lowest flex-shrink-0">
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-metadata-label text-metadata-label font-semibold text-primary uppercase tracking-wide">Status Sampel</span>
+</div>
+<p class="font-body-compact text-[11px] text-tertiary font-medium">Dataset Historis: 1.133 lowongan (Glints ID)</p>
+<p class="font-metadata-label text-[10px] text-outline mt-0.5">Perlu verifikasi tanggal unduh</p>
+</div>
+<div class="flex items-center gap-space-sm p-1.5 rounded-xl hover:bg-surface-container transition-colors cursor-pointer">
+<img alt="Maya Kartika" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TlBUfWmUpZYc1iDISPm_ZOOO2NcR-dbcpPwmqpMhDXvIlYQjXdxg-2u8vw70bex68z2UMp22hD4virzYcUZwAqJXVrhtpB62FHoKHDvtMyeVNQxbZ4q22gKeSeSJJk84hh5WknRVAqxYxTbMCr8cAXt3pCUW24sdAJryIboXdyf9y18S6MAyebwCQmTvbDcEk24SExh4xz_ktJ8RL0yHgCYk2AeaPA2H1TTLAWsI2H9jMcFlW-oyJw"/>
+<div class="min-w-0 flex-1">
+<p class="font-body-semibold text-body-compact text-on-surface truncate leading-tight">Maya Kartika</p>
+<p class="font-metadata-label text-[11px] text-tertiary truncate leading-tight mt-0.5">Analis Data</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span>
+</div>
+</div>
+</aside>
+<!-- KONTEN UTAMA DENGAN HEADER BERSIH -->
+<div class="pl-64 flex flex-col min-h-screen">
+<!-- Navbar Atas: Rapi, Bebas Tumpang Tindih -->
+<header class="fixed top-0 left-64 right-0 h-16 bg-surface/95 backdrop-blur-md shadow-[0_1px_4px_rgba(0,0,0,0.03)] z-40 border-b border-surface-container">
+<div class="h-16 px-space-lg flex items-center justify-between gap-space-md">
+<!-- Pencarian Global -->
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-16 py-2 bg-surface-container-low hover:bg-surface-container-high focus:bg-surface-container-lowest rounded-xl font-body-compact text-body-compact text-on-surface placeholder:text-outline border border-surface-container transition-all outline-none focus:border-primary" placeholder="Cari posisi, keterampilan, perusahaan..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded font-data-mono text-[11px] font-medium bg-surface-container text-tertiary border border-surface-container-high">⌘K</span>
+</div>
+</div>
+<!-- Indikator Data & Profil Pengguna -->
+<div class="flex items-center gap-space-md">
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[16px]">dataset</span>
+<span class="font-metadata-label text-[12px] font-medium">Dataset Glints ID (1.133 Lowongan)</span>
+</div>
+<a class="hidden sm:flex items-center gap-1 font-body-compact text-body-compact text-tertiary hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Dokumentasi</span>
+</a>
+<button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Notifikasi">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span>
+</button>
+<div class="h-5 w-px bg-surface-container"></div>
+<!-- Profil Pengguna Header -->
+<div class="flex items-center gap-space-sm pl-1 cursor-pointer hover:opacity-90 transition-opacity">
+<img alt="Maya Kartika" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TlBUfWmUpZYc1iDISPm_ZOOO2NcR-dbcpPwmqpMhDXvIlYQjXdxg-2u8vw70bex68z2UMp22hD4virzYcUZwAqJXVrhtpB62FHoKHDvtMyeVNQxbZ4q22gKeSeSJJk84hh5WknRVAqxYxTbMCr8cAXt3pCUW24sdAJryIboXdyf9y18S6MAyebwCQmTvbDcEk24SExh4xz_ktJ8RL0yHgCYk2AeaPA2H1TTLAWsI2H9jMcFlW-oyJw"/>
+<div class="hidden md:flex flex-col text-left">
+<span class="font-body-semibold text-[13px] text-on-surface leading-tight">Maya Kartika</span>
+<span class="font-metadata-label text-[11px] text-tertiary leading-tight">Analis Data</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Konten Dashboard Utama -->
+<main class="w-full pt-16 flex-1 bg-surface">
+<div class="max-w-[1400px] mx-auto px-space-md lg:px-space-lg py-space-lg">
+<div class="flex flex-col w-full space-y-space-xl">
+<!-- 1. HEADER & IDENTITAS + BANNER DATA HISTORIS -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm mb-1.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-metadata-label text-metadata-label font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Intelijen Ketenagakerjaan
+                  </span>
+<span class="font-metadata-label text-metadata-label text-outline">Glints Indonesia Snapshot</span>
+</div>
+<h1 class="font-title-page text-title-page text-on-surface tracking-tight">Ringkasan Pasar Kerja</h1>
+<p class="font-body-default text-body-default text-on-surface-variant max-w-2xl mt-0.5">
+                  Jelajahi karakteristik lowongan kerja berdasarkan data yang berhasil dikumpulkan.
+                </p>
+</div>
+<!-- Banner Info Data Historis Transparan -->
+<div class="flex items-start gap-space-sm px-space-md py-3 rounded-xl bg-surface-container-low border border-surface-container shadow-sm max-w-lg">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0 mt-0.5">info</span>
+<div class="flex flex-col text-left">
+<span class="font-body-semibold text-[13px] text-on-surface">Dataset Historis (n=1.133)</span>
+<span class="font-metadata-label text-[12px] text-tertiary leading-relaxed mt-0.5">
+                    Dataset Historis: Contoh Analisis dari Dataset Glints Indonesia (n=1.133) • Periode Pengumpulan Perlu Diverifikasi
+                  </span>
+</div>
+</div>
+</div>
+<!-- Bilah Filter & Tombol Unduh CSV -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Filter Lokasi -->
+<div class="relative">
+<select class="appearance-none pl-8 pr-8 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-compact text-body-compact transition-colors outline-none cursor-pointer border border-surface-container" id="location-filter">
+<option value="all">Seluruh Wilayah (1.133)</option>
+<option value="jaksel">Jakarta Selatan (221)</option>
+<option value="jakbar">Jakarta Barat (118)</option>
+<option value="jakpus">Jakarta Pusat (79)</option>
+<option value="tangerang">Tangerang / BSD (64)</option>
+<option value="remote">Luar Jabodetabek / Remote (142)</option>
+</select>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-tertiary pointer-events-none">pin_drop</span>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Filter Kategori -->
+<div class="relative">
+<select class="appearance-none pl-8 pr-8 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-compact text-body-compact transition-colors outline-none cursor-pointer border border-surface-container" id="category-filter">
+<option value="all">Semua Kategori</option>
+<option value="swe">Rekayasa Perangkat Lunak</option>
+<option value="data">Data &amp; Analitik</option>
+<option value="product">Manajemen Produk</option>
+<option value="qa">Pengujian Kualitas (QA)</option>
+</select>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-tertiary pointer-events-none">category</span>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Informasi Sampel -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container text-tertiary font-body-compact text-[13px]">
+<span class="material-symbols-outlined text-[16px]">database</span>
+<span>1.133 entri catatan pekerjaan</span>
+</div>
+</div>
+<!-- Tombol Aksi: Unduh Ringkasan CSV -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container transition-all shadow-sm active:scale-95 font-body-semibold text-body-compact" id="export-btn">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Unduh Ringkasan CSV</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. KARTU METRIK UTAMA (ANGKA TERVERIFIKASI & HAPUS KLAIM PALSU) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metrik 1: Total Lowongan -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Total Lowongan</span>
+<div class="font-kpi-metric text-kpi-metric text-on-surface tracking-tight" id="kpi-jobs">1.133</div>
+</div>
+<div class="p-2.5 rounded-xl bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">work_outline</span>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-surface-container-low text-tertiary font-metadata-label text-metadata-label">
+                Lowongan unik terindeks dari Glints
+              </div>
+</div>
+<!-- Metrik 2: Sebaran Wilayah Utama -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Sebaran Wilayah Utama</span>
+<div class="font-kpi-metric text-[26px] text-on-surface tracking-tight mt-0.5">Jabodetabek</div>
+</div>
+<div class="p-2.5 rounded-xl bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-surface-container-low text-tertiary font-metadata-label text-[11px] leading-tight">
+                Jakarta Selatan 221, Jakarta Barat 118, Jakarta Pusat 79
+              </div>
+</div>
+<!-- Metrik 3: Rata-rata Rentang Gaji Terlapor -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Rentang Gaji Terlapor</span>
+<div class="font-kpi-metric text-on-surface tracking-tight leading-none text-[21px] mt-1">
+                    ~Rp5,19 jt <span class="text-tertiary font-normal text-[15px]">–</span> Rp7,33 jt <span class="text-[12px] text-tertiary font-normal">/ bln</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-surface-container-low text-tertiary font-metadata-label text-[11px] leading-tight">
+                Rata-rata minimum &amp; maksimum dari lowongan yang mencantumkan gaji; bukan median nasional
+              </div>
+</div>
+<!-- Metrik 4: Keterampilan Utama -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-metadata-label text-[11px] uppercase tracking-wider text-outline font-semibold">Keterampilan Utama</span>
+<div class="font-kpi-metric text-[26px] text-primary tracking-tight mt-0.5">SQL &amp; Python</div>
+</div>
+<div class="p-2.5 rounded-xl bg-primary-fixed-dim text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-surface-container-low text-tertiary font-metadata-label text-metadata-label">
+                Keterampilan dengan kemunculan tertinggi dalam deskripsi
+              </div>
+</div>
+</div>
+<!-- 4. VISUALISASI SEBARAN JENIS PEKERJAAN -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Sebaran Jenis Pekerjaan</h2>
+<p class="font-metadata-label text-metadata-label text-outline mt-0.5">Proporsi kontrak kerja dalam dataset Glints Indonesia (n=1.133)</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md font-metadata-label text-[12px] text-tertiary">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-primary"></span> Penuh Waktu (73,7%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> Kontrak (16,8%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-secondary-fixed-dim"></span> Magang (6,4%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container"></span> Freelance (2,2%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-outline-variant"></span> Paruh Waktu (1,0%)</span>
+</div>
+</div>
+<!-- Bar Segmentasi Proporsi -->
+<div class="h-3.5 w-full rounded-full bg-surface-container overflow-hidden flex shadow-inner">
+<div class="h-full bg-primary transition-all duration-500" style="width: 73.7%" title="Penuh Waktu: 835 (73,7%)"></div>
+<div class="h-full bg-secondary transition-all duration-500" style="width: 16.8%" title="Kontrak: 190 (16,8%)"></div>
+<div class="h-full bg-secondary-fixed-dim transition-all duration-500" style="width: 6.4%" title="Magang: 72 (6,4%)"></div>
+<div class="h-full bg-tertiary-container transition-all duration-500" style="width: 2.2%" title="Freelance: 25 (2,2%)"></div>
+<div class="h-full bg-outline-variant transition-all duration-500" style="width: 1.0%" title="Paruh Waktu: 11 (1,0%)"></div>
+</div>
+<!-- Kotak Ringkasan Rinci Per Kategori -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm pt-1">
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Penuh Waktu</span>
+<span class="font-title-section text-title-section text-on-surface">835</span>
+<span class="font-data-mono text-[11px] text-primary block mt-0.5">73,7% lowongan</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Kontrak</span>
+<span class="font-title-section text-title-section text-on-surface">190</span>
+<span class="font-data-mono text-[11px] text-secondary block mt-0.5">16,8% lowongan</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Magang</span>
+<span class="font-title-section text-title-section text-on-surface">72</span>
+<span class="font-data-mono text-[11px] text-tertiary block mt-0.5">6,4% lowongan</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Freelance</span>
+<span class="font-title-section text-title-section text-on-surface">25</span>
+<span class="font-data-mono text-[11px] text-outline block mt-0.5">2,2% lowongan</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Paruh Waktu</span>
+<span class="font-title-section text-title-section text-on-surface">11</span>
+<span class="font-data-mono text-[11px] text-outline block mt-0.5">1,0% lowongan</span>
+</div>
+</div>
+</div>
+<!-- GRID 2x2 VISUALISASI ANALITIK UTAMA -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Visual 1: Posisi yang Sering Muncul dalam Dataset -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Posisi yang Sering Muncul</h2>
+<p class="font-metadata-label text-metadata-label text-tertiary">Frekuensi jabatan lowongan dalam dataset</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container font-data-mono text-[11px] text-tertiary font-medium">6 Posisi Teratas</span>
+</div>
+<div class="mt-space-md space-y-space-md">
+<!-- Posisi 1 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">Full Stack Developer</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">142</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-primary">12,5%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 100%"></div>
+</div>
+</div>
+<!-- Posisi 2 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">Business Analyst</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">98</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-primary">8,6%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 69%"></div>
+</div>
+</div>
+<!-- Posisi 3 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">Web Developer</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">86</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-primary">7,6%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-700" style="width: 60.5%"></div>
+</div>
+</div>
+<!-- Posisi 4 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">DevOps Engineer</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">84</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-primary">7,4%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-700" style="width: 59%"></div>
+</div>
+</div>
+<!-- Posisi 5 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">Data Analyst</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">62</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-secondary">5,5%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-700" style="width: 43.6%"></div>
+</div>
+</div>
+<!-- Posisi 6 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="font-body-semibold text-on-surface">Software Engineer</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-tertiary">51</span>
+<span class="font-metadata-label text-metadata-label font-semibold text-secondary">4,5%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-700" style="width: 35.9%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-3 flex items-center justify-between font-metadata-label text-metadata-label text-outline border-t border-surface-container">
+<span>Total 6 posisi utama: 523 lowongan (46,1%)</span>
+<a class="text-primary hover:underline flex items-center gap-0.5 font-medium" data-path="explore-jobs" href="#">
+<span>Lihat Seluruh Posisi</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Visual 2: Distribusi Lowongan Berdasarkan Lokasi -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Distribusi Wilayah Lowongan</h2>
+<p class="font-metadata-label text-metadata-label text-tertiary">Konsentrasi kota dan wilayah kerja tercatat</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container font-data-mono text-[11px] text-tertiary font-medium">Berdasarkan Teks Listing</span>
+</div>
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-2 gap-space-md items-center">
+<!-- Visual Ring Donat Proporsi -->
+<div class="flex items-center justify-center p-space-sm relative">
+<svg class="w-40 h-40 transform -rotate-90" viewbox="0 0 160 160">
+<!-- Latar Belakang Lingkaran (Wilayah Lainnya: 50,6%) -->
+<circle class="text-surface-container" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-width="18"></circle>
+<!-- Jakarta Selatan (19,5%) -> keliling 402,12 -> dash: 78,4 -->
+<circle class="text-primary" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-dasharray="78.4 323.7" stroke-dashoffset="0" stroke-width="18"></circle>
+<!-- Luar Jabodetabek / Remote (12,5%) -> dash: 50,2 -->
+<circle class="text-secondary" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-dasharray="50.2 351.9" stroke-dashoffset="-78.4" stroke-width="18"></circle>
+<!-- Jakarta Barat (10,4%) -> dash: 41,8 -->
+<circle class="text-primary-fixed-dim" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-dasharray="41.8 360.3" stroke-dashoffset="-128.6" stroke-width="18"></circle>
+<!-- Jakarta Pusat (7,0%) -> dash: 28,1 -->
+<circle class="text-secondary-fixed-dim" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-dasharray="28.1 374.0" stroke-dashoffset="-170.4" stroke-width="18"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-kpi-metric text-title-page text-on-surface">49,4%</span>
+<span class="font-metadata-label text-[10px] text-tertiary uppercase tracking-wider text-center">4 Wilayah Utama</span>
+</div>
+</div>
+<!-- Daftar Data Lokasi Rinci -->
+<div class="space-y-1.5 font-body-compact text-[13px]">
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0"></span>
+<span class="font-medium text-on-surface">Jakarta Selatan</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono">
+<span class="text-tertiary">221</span>
+<span class="text-primary font-semibold">19,5%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="font-medium text-on-surface">Luar Jabodetabek / Remote</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono">
+<span class="text-tertiary">142</span>
+<span class="text-secondary font-semibold">12,5%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim flex-shrink-0"></span>
+<span class="font-medium text-on-surface">Jakarta Barat</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono">
+<span class="text-tertiary">118</span>
+<span class="text-tertiary">10,4%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim flex-shrink-0"></span>
+<span class="font-medium text-on-surface">Jakarta Pusat</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono">
+<span class="text-tertiary">79</span>
+<span class="text-tertiary">7,0%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant flex-shrink-0"></span>
+<span class="font-medium text-on-surface">Wilayah Lainnya</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono">
+<span class="text-tertiary">573</span>
+<span class="text-tertiary">50,6%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-3 flex items-center justify-between font-metadata-label text-metadata-label text-outline border-t border-surface-container">
+<span>Termasuk Tangerang, Bandung, Surabaya, dan lainnya</span>
+<span class="font-data-mono text-[11px] text-tertiary">Total n=1.133</span>
+</div>
+</div>
+<!-- Visual 3: Keterampilan Paling Sering Muncul -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Frekuensi Keterampilan</h2>
+<p class="font-metadata-label text-metadata-label text-tertiary">Keterampilan teknis yang paling banyak dicantumkan</p>
+</div>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-metadata-label text-[11px] font-semibold">Teks Lowongan</span>
+</div>
+<div class="mt-space-md grid grid-cols-2 gap-space-sm">
+<!-- Skill 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">SQL</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">312</span>
+<span class="font-metadata-label text-[10px] text-primary block">27,5%</span>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">Python</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">245</span>
+<span class="font-metadata-label text-[10px] text-primary block">21,6%</span>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">JavaScript</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">278</span>
+<span class="font-metadata-label text-[10px] text-tertiary block">24,5%</span>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">React</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">194</span>
+<span class="font-metadata-label text-[10px] text-tertiary block">17,1%</span>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">Git</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">182</span>
+<span class="font-metadata-label text-[10px] text-secondary block">16,1%</span>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">Node.js</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">148</span>
+<span class="font-metadata-label text-[10px] text-secondary block">13,1%</span>
+</div>
+</div>
+<!-- Skill 7 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">Docker</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">115</span>
+<span class="font-metadata-label text-[10px] text-outline block">10,2%</span>
+</div>
+</div>
+<!-- Skill 8 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-body-semibold text-body-compact text-on-surface">AWS</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono font-semibold text-on-surface text-body-compact">126</span>
+<span class="font-metadata-label text-[10px] text-outline block">11,1%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-3 flex items-center justify-between font-metadata-label text-metadata-label text-outline border-t border-surface-container">
+<span>Daftar kata kunci diekstrak dari deskripsi pekerjaan</span>
+<a class="text-primary hover:underline flex items-center gap-0.5 font-medium" data-path="skill-intelligence" href="#">
+<span>Analisis Keterampilan</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Visual 4: Transparansi Informasi Gaji -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Transparansi Informasi Gaji</h2>
+<p class="font-metadata-label text-metadata-label text-tertiary">Sebaran nilai dari porsi lowongan yang mencantumkan nominal</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container font-data-mono text-[11px] text-tertiary font-medium">Nominal Bulanan</span>
+</div>
+<div class="mt-space-md space-y-space-md">
+<!-- Kotak Rata-rata Pelaporan -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-surface-container space-y-2.5">
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="text-tertiary font-metadata-label">Rata-rata Batas Bawah</span>
+<span class="font-data-mono font-semibold text-on-surface">Rp5.190.000 / bln</span>
+</div>
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="text-primary font-body-semibold">Rata-rata Rentang Terlapor</span>
+<span class="font-data-mono font-bold text-primary">~Rp5,19 jt – Rp7,33 jt</span>
+</div>
+<div class="flex items-center justify-between font-body-compact text-body-compact">
+<span class="text-tertiary font-metadata-label">Rata-rata Batas Atas</span>
+<span class="font-data-mono font-semibold text-on-surface">Rp7.330.000 / bln</span>
+</div>
+</div>
+<!-- Pemberitahuan Transparansi: Mayoritas Tidak Mencantumkan Gaji -->
+<div class="flex items-start gap-space-sm p-3 rounded-xl bg-surface-container border border-surface-container-high">
+<span class="material-symbols-outlined text-[20px] text-tertiary flex-shrink-0 mt-0.5">info</span>
+<p class="font-metadata-label text-[12px] text-tertiary leading-relaxed">
+<strong class="text-on-surface font-semibold">Gaji tidak dicantumkan oleh pemberi kerja:</strong> Mayoritas lowongan dalam dataset tidak mempublikasikan rentang gaji eksplisit, sehingga rata-rata Rp5,19 jt – Rp7,33 jt dihitung hanya dari porsi data yang mencantumkan nominal.
+                    </p>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-3 flex items-center justify-between font-metadata-label text-metadata-label text-outline border-t border-surface-container">
+<span>Hanya memperhitungkan catatan yang terbuka</span>
+<a class="text-primary hover:underline flex items-center gap-0.5 font-medium" data-path="salary-insights" href="#">
+<span>Detail Analisis Gaji</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 5. HASIL EKSPERIMEN K-MEANS & CATATAN METODOLOGI -->
+<div class="p-space-lg rounded-xl bg-surface-container-high border border-surface-container shadow-sm relative overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest text-primary shadow-sm flex-shrink-0 border border-surface-container">
+<span class="material-symbols-outlined text-[26px]">model_training</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h3 class="font-title-section text-title-section text-on-surface font-bold">Hasil Eksperimen K-Means &amp; Metodologi</h3>
+<span class="px-2 py-0.5 rounded font-data-mono text-[11px] font-semibold bg-surface-container text-tertiary border border-surface-container">k = 3</span>
+<span class="px-2 py-0.5 rounded font-data-mono text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed-variant">Silhouette Score: 0,0351</span>
+</div>
+<p class="font-body-compact text-[13px] text-on-surface-variant max-w-4xl leading-relaxed">
+                    Skor Silhouette 0,0351 bernilai rendah dan menunjukkan pemisahan klaster yang lemah pada representasi teks ini, menandakan bahwa deskripsi pekerjaan di sektor teknologi memiliki tumpang tindih keahlian yang sangat tinggi antaranalisis, frontend, dan backend.
+                  </p>
+</div>
+</div>
+<div class="flex-shrink-0">
+<a class="px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-semibold text-body-compact border border-surface-container shadow-sm transition-all flex items-center gap-1.5 whitespace-nowrap" data-path="market-intelligence" href="#">
+<span>Lihat Klaster</span>
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 6. TABEL CONTOH LOWONGAN HISTORIS -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-title-section text-title-section text-on-surface">Contoh Catatan Lowongan dalam Dataset Historis</h2>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-0.5">Sampel representatif dari data lowongan pekerjaan Glints Indonesia</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="flex items-center gap-1 font-body-semibold text-body-compact text-primary hover:text-primary-container transition-colors" data-path="explore-jobs" href="#">
+<span>Buka Seluruh Lowongan</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Tabel Data Analitis -->
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-tertiary font-metadata-label text-[11px] uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Posisi &amp; Kode</th>
+<th class="py-3 px-4">Perusahaan</th>
+<th class="py-3 px-4">Lokasi</th>
+<th class="py-3 px-4">Jenis Pekerjaan</th>
+<th class="py-3 px-4">Informasi Gaji</th>
+<th class="py-3 px-4">Keterampilan Terdeteksi</th>
+<th class="py-3 px-4 rounded-r-lg text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-compact text-body-compact text-on-surface">
+<!-- Baris 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-4 font-body-semibold">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors">Senior Software Engineer (Backend)</span>
+<span class="font-data-mono text-[11px] text-tertiary font-normal">ID: GL-94812</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-bold text-[11px] text-primary">TK</span>
+<span class="font-medium">Tokopedia Ecosystem</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">location_on</span>
+                        Jakarta Selatan
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-semibold">Penuh Waktu</span>
+</td>
+<td class="py-3.5 px-4 font-data-mono text-on-surface">
+                      Rp18.000.000 – Rp25.000.000
+                    </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Go</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">PostgreSQL</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Docker</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<a class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" data-path="explore-jobs" href="#" title="Buka Detail">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</td>
+</tr>
+<!-- Baris 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-4 font-body-semibold">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors">Data Analyst (Product Analytics)</span>
+<span class="font-data-mono text-[11px] text-tertiary font-normal">ID: GL-94201</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-bold text-[11px] text-secondary">BK</span>
+<span class="font-medium">Bank Danamon ID</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">location_on</span>
+                        Jakarta Pusat
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-semibold">Penuh Waktu</span>
+</td>
+<td class="py-3.5 px-4 font-data-mono text-on-surface">
+                      Rp8.500.000 – Rp12.000.000
+                    </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">SQL</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Python</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Tableau</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<a class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" data-path="explore-jobs" href="#" title="Buka Detail">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</td>
+</tr>
+<!-- Baris 3: Gaji tidak dicantumkan -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-4 font-body-semibold">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors">Frontend Web Developer</span>
+<span class="font-data-mono text-[11px] text-tertiary font-normal">ID: GL-93551</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-bold text-[11px] text-tertiary">AG</span>
+<span class="font-medium">Astra Digital</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">location_on</span>
+                        Tangerang / BSD
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-[11px] font-semibold">Kontrak</span>
+</td>
+<td class="py-3.5 px-4 font-body-compact text-outline italic">
+                      Gaji tidak dicantumkan
+                    </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">React</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">TypeScript</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Tailwind</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<a class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" data-path="explore-jobs" href="#" title="Buka Detail">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</td>
+</tr>
+<!-- Baris 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-4 font-body-semibold">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors">Associate Product Manager</span>
+<span class="font-data-mono text-[11px] text-tertiary font-normal">ID: GL-92180</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-bold text-[11px] text-primary">TV</span>
+<span class="font-medium">Traveloka</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">public</span>
+                        Remote
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-semibold">Penuh Waktu</span>
+</td>
+<td class="py-3.5 px-4 font-data-mono text-on-surface">
+                      Rp10.000.000 – Rp14.500.000
+                    </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Roadmapping</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Jira</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono text-[11px] text-tertiary">Analisis Data</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<a class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" data-path="explore-jobs" href="#" title="Buka Detail">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bagian Bawah Tabel -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-metadata-label text-metadata-label text-tertiary">
+<span>Menampilkan 4 contoh catatan dari total 1.133 lowongan pada dataset historis Glints</span>
+<div class="flex items-center gap-space-xs">
+<a class="px-3 py-1.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-medium" data-path="explore-jobs" href="#">
+                  Buka Seluruh Lowongan
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const locFilter = document.getElementById('location-filter');
+      const catFilter = document.getElementById('category-filter');
+      const exportBtn = document.getElementById('export-btn');
+
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function() {
+          const originalHTML = exportBtn.innerHTML;
+          exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Mengunduh CSV...</span>';
+          setTimeout(() => {
+            exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Berhasil Diunduh</span>';
+            setTimeout(() => {
+              exportBtn.innerHTML = originalHTML;
+            }, 2000);
+          }, 800);
+        });
+      }
+
+      function applyFilterVisual() {
+        const jobsEl = document.getElementById('kpi-jobs');
+        if (jobsEl) {
+          jobsEl.style.opacity = '0.35';
+          setTimeout(() => {
+            jobsEl.style.opacity = '1';
+          }, 150);
+        }
+      }
+
+      if (locFilter) locFilter.addEventListener('change', applyFilterVisual);
+      if (catFilter) catFilter.addEventListener('change', applyFilterVisual);
+    })();
+  </script>
+</body></html>

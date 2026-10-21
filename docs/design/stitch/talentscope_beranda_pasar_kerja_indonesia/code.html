@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed":"#00201c","inverse-surface":"#283044","on-tertiary-container":"#fefcff","tertiary":"#4e5d75","primary-container":"#008377","surface-container":"#eaedff","on-primary-container":"#f4fffc","primary-fixed":"#82f6e6","on-primary":"#ffffff","on-tertiary-fixed-variant":"#39475f","tertiary-container":"#67758f","outline-variant":"#bcc9c6","secondary-fixed-dim":"#b4c5ff","tertiary-fixed":"#d5e3ff","on-primary-fixed-variant":"#005048","surface-container-high":"#e2e7ff","primary-fixed-dim":"#63d9ca","on-surface-variant":"#3d4947","error":"#ba1a1a","secondary-container":"#316bf3","inverse-on-surface":"#eef0ff","outline":"#6d7a77","on-error-container":"#93000a","on-error":"#ffffff","surface-container-lowest":"#ffffff","secondary":"#0051d5","background":"#faf8ff","secondary-fixed":"#dbe1ff","inverse-primary":"#63d9ca","surface-bright":"#faf8ff","surface-container-highest":"#dae2fd","tertiary-fixed-dim":"#b8c7e4","surface-variant":"#dae2fd","on-tertiary-fixed":"#0c1c32","on-secondary":"#ffffff","on-background":"#131b2e","surface-tint":"#006a61","primary":"#00685e","on-tertiary":"#ffffff","surface":"#faf8ff","on-secondary-fixed-variant":"#003ea8","on-surface":"#131b2e","error-container":"#ffdad6","on-secondary-fixed":"#00174b","surface-dim":"#d2d9f4","surface-container-low":"#f2f3ff","on-secondary-container":"#fefcff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-xl":"2.25rem","margin":"1rem","gutter-desktop":"1.5rem","space-md":"1rem","space-lg":"1.5rem","margin-tablet":"1.5rem","margin-desktop":"2.5rem","space-xs":"0.25rem","gutter":"1.25rem"},fontFamily:{"metadata-label":["Inter"],"display-lg":["Geist"],"title-section":["Geist"],"body-compact":["Inter"],"body-semibold":["Inter"],"title-page":["Geist"],"kpi-metric-mobile":["Geist"],"body-default":["Inter"],"kpi-metric":["Geist"],"display-lg-mobile":["Geist"],"data-mono":["JetBrains Mono"]},fontSize:{"metadata-label":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"700"}],"title-section":["18px",{lineHeight:"26px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-compact":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"body-semibold":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"600"}],"title-page":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"kpi-metric-mobile":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-default":["15px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"kpi-metric":["30px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"data-mono":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-background font-body-default text-on-surface antialiased"><main class="min-h-screen w-full flex items-center justify-center p-0"><div class="flex flex-col w-full">
+<!-- Top Navigation Header -->
+<header class="w-full bg-surface-container-lowest shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-8">
+<a class="flex items-center space-x-3 group shrink-0" href="/">
+<img alt="TalentScope Brand Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UH793mZRa7ERP0Vtb26XIakrhWPdAEArOttmZ0C8VaIwpLjITaDeYjfievRJP6bQFhJtUygeOQ3JBCWgbmu6I3W65CTtd4zi7WHYMODa6ISjVwPu0PU8CoxGjc7Q1iTxayYNYhPRtzSCCv2kuReua_Znf0uTK1k0E5gfTeYzrePibg2BV4Zdc5c6-CshGjHWF1mO2l8TeOUyeG5EVJcyR38O0WoOKlg8qxZvaV7MEbu4gOEIuNdRXYmK6b"/>
+</a>
+<nav class="hidden lg:flex items-center space-x-6">
+<a class="font-metadata-label text-metadata-label text-on-surface-variant hover:text-primary transition-colors" href="#jelajahi-lowongan">Jelajahi Lowongan</a>
+<a class="font-metadata-label text-metadata-label text-on-surface-variant hover:text-primary transition-colors" href="#analisis-pasar">Analisis Pasar</a>
+<a class="font-metadata-label text-metadata-label text-on-surface-variant hover:text-primary transition-colors" href="#analisis-keterampilan">Analisis Keterampilan</a>
+<a class="font-metadata-label text-metadata-label text-on-surface-variant hover:text-primary transition-colors" href="#metodologi-data">Metodologi Data</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<span class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container text-tertiary font-data-mono text-data-mono">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>N = 1.133 LOWONGAN HISTORIS</span>
+</span>
+<button class="px-4 py-2 text-on-surface hover:text-primary font-body-semibold text-body-semibold transition-colors">Masuk</button>
+<a class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-semibold text-body-semibold shadow-sm transition-all transform active:scale-98" href="#jelajahi-lowongan">
+<span>Mulai Eksplorasi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full bg-surface overflow-hidden py-16 sm:py-24" id="jelajahi-lowongan">
+<!-- Ambient Depth Elements -->
+<div class="absolute -top-32 -left-20 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<!-- Cohort Transparency Banner -->
+<div class="flex items-center justify-start">
+<div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant border border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-[18px]">dataset</span>
+<span class="font-metadata-label text-metadata-label tracking-wide font-semibold text-primary">DATASET HISTORIS: CONTOH ANALISIS DARI 1.133 LOWONGAN GLINTS INDONESIA</span>
+</div>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="mt-6 max-w-4xl">
+<h1 class="font-display-lg text-display-lg sm:text-[54px] sm:leading-[62px] text-on-surface font-bold tracking-tight">
+          Kenali Pasar Kerja. <br class="hidden sm:block"/>
+<span class="text-primary underline decoration-primary-fixed-dim decoration-4 underline-offset-8">Temukan Peluangmu.</span>
+</h1>
+<p class="mt-6 font-body-default text-body-default text-tertiary max-w-3xl leading-relaxed text-base sm:text-lg">
+          Jelajahi lowongan kerja, pahami keterampilan yang dibutuhkan perusahaan, dan temukan wawasan pasar kerja melalui analisis data terstruktur dari <span class="font-body-semibold text-on-surface font-semibold">1.133 lowongan teknologi</span> yang dihimpun secara transparan di Indonesia.
+        </p>
+</div>
+<!-- Interactive Search Card -->
+<div class="mt-10 bg-surface-container-lowest p-5 sm:p-7 rounded-xl shadow-md border border-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<!-- Keyword input -->
+<div class="md:col-span-5 relative">
+<label class="block font-metadata-label text-metadata-label text-tertiary mb-1.5 font-medium">Posisi atau kata kunci</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3.5 py-2.5 focus-within:ring-2 focus-within:ring-primary/40">
+<span class="material-symbols-outlined text-tertiary mr-2 text-[20px]">search</span>
+<input class="w-full bg-transparent text-on-surface font-body-default text-body-default focus:outline-none placeholder-tertiary/70" id="roleInput" placeholder="Contoh: Data Engineer, Backend Developer, QA" type="text" value="Data Engineer"/>
+</div>
+</div>
+<!-- Location selection -->
+<div class="md:col-span-4 relative">
+<label class="block font-metadata-label text-metadata-label text-tertiary mb-1.5 font-medium">Lokasi Kerja</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3.5 py-2.5 focus-within:ring-2 focus-within:ring-primary/40">
+<span class="material-symbols-outlined text-tertiary mr-2 text-[20px]">location_on</span>
+<select class="w-full bg-transparent text-on-surface font-body-default text-body-default focus:outline-none appearance-none cursor-pointer" id="locationSelect">
+<option value="Semua Lokasi">Semua Lokasi (Nasional &amp; Remote)</option>
+<option value="Jakarta Selatan">Jakarta Selatan</option>
+<option value="Jakarta Barat">Jakarta Barat</option>
+<option value="Bandung">Bandung</option>
+<option value="Remote">Remote (Jarak Jauh)</option>
+</select>
+<span class="material-symbols-outlined text-tertiary pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Analyze / Search CTA -->
+<div class="md:col-span-3 flex flex-col justify-end">
+<span class="hidden md:block font-metadata-label text-metadata-label text-transparent mb-1.5">Aksi</span>
+<div class="flex space-x-2">
+<button class="w-full py-2.5 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-semibold text-body-semibold flex items-center justify-center space-x-1.5 shadow-sm transition-all" id="triggerSearch">
+<span class="material-symbols-outlined text-[19px]">search</span>
+<span>Cari Lowongan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Skill Quick Tag Selector -->
+<div class="mt-4 pt-4 border-t border-surface-container-low flex flex-wrap items-center gap-2">
+<span class="font-metadata-label text-metadata-label text-tertiary mr-1 font-medium">Keterampilan Populer:</span>
+<button class="skill-tag active inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-fixed text-on-primary-fixed transition-all" data-skill="Python">
+            Python
+            <span class="material-symbols-outlined text-[14px] ml-1">check</span>
+</button>
+<button class="skill-tag active inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-fixed text-on-primary-fixed transition-all" data-skill="SQL">
+            SQL
+            <span class="material-symbols-outlined text-[14px] ml-1">check</span>
+</button>
+<button class="skill-tag inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-skill="Docker">
+            Docker
+            <span class="material-symbols-outlined text-[14px] ml-1">add</span>
+</button>
+<button class="skill-tag inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-skill="React">
+            React.js
+            <span class="material-symbols-outlined text-[14px] ml-1">add</span>
+</button>
+<button class="skill-tag inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-skill="Apache Spark">
+            Apache Spark
+            <span class="material-symbols-outlined text-[14px] ml-1">add</span>
+</button>
+<a class="ml-auto inline-flex items-center space-x-1 font-metadata-label text-metadata-label text-primary hover:underline font-semibold" href="#analisis-pasar">
+<span>Lihat Analisis Pasar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Verified Metrics Cards (No False Claims) -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Gaji Terlapor dalam Dataset -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-metadata-label text-metadata-label text-tertiary uppercase tracking-wider font-medium">Rentang Gaji Terlapor</span>
+<span class="p-1.5 rounded-md bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline space-x-2">
+<span class="font-kpi-metric text-kpi-metric text-on-surface font-bold">~Rp5,19 jt – Rp7,33 jt</span>
+</div>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-1.5 leading-snug">
+            Rata-rata gaji minimum hingga maksimum dari lowongan dalam sampel yang mencantumkan nominal (bukan representasi upah median nasional).
+          </p>
+</div>
+<div class="mt-5 pt-3 border-t border-surface-container-low flex justify-between font-data-mono text-[11px] text-tertiary">
+<span>Min rerata: Rp5,19 jt</span>
+<span class="text-primary font-semibold">Maks rerata: Rp7,33 jt</span>
+</div>
+</div>
+<!-- Card 2: Sebaran Kebutuhan Keterampilan -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-metadata-label text-metadata-label text-tertiary uppercase tracking-wider font-medium">Keterampilan Paling Sering Muncul</span>
+<span class="p-1.5 rounded-md bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+</span>
+</div>
+<div class="mt-4">
+<span class="font-kpi-metric text-kpi-metric text-on-surface font-bold">SQL &amp; Python</span>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-1.5 leading-snug">
+            Keterampilan teknis dengan frekuensi kemunculan tertinggi pada deskripsi lowongan data &amp; rekayasa perangkat lunak.
+          </p>
+</div>
+<div class="mt-4 space-y-2">
+<div>
+<div class="flex justify-between font-metadata-label text-metadata-label text-on-surface mb-1">
+<span>SQL / Basis Data Relasional</span>
+<span class="font-data-mono text-tertiary">734 lowongan</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 64.8%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-metadata-label text-metadata-label text-on-surface mb-1">
+<span>Python &amp; Analisis Scripting</span>
+<span class="font-data-mono text-tertiary">512 lowongan</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 45.2%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Konsentrasi Geografis Lowongan -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-metadata-label text-metadata-label text-tertiary uppercase tracking-wider font-medium">Sebaran Wilayah Penempatan</span>
+<span class="p-1.5 rounded-md bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[18px]">location_city</span>
+</span>
+</div>
+<div class="mt-4">
+<span class="font-kpi-metric text-kpi-metric text-on-surface font-bold">Wilayah Jabodetabek</span>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-1.5 leading-snug">
+            Mayoritas posisi terpusat di kawasan metropolitan dengan kehadiran opsi kerja jarak jauh nasional.
+          </p>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-2.5 pt-1">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Jakarta Selatan</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">546 Lowongan</span>
+<span class="font-data-mono text-[11px] text-primary block mt-0.5">48,2% dari sampel</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-metadata-label text-metadata-label text-tertiary block">Jakarta Barat &amp; Lainnya</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">587 Lowongan</span>
+<span class="font-data-mono text-[11px] text-secondary block mt-0.5">51,8% dari sampel</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDUKATIF 1: Cara TalentScope Mengolah Data -->
+<section class="w-full bg-surface-container-lowest py-20" id="metodologi-data">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-surface-container text-primary font-metadata-label text-metadata-label font-semibold">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+<span>ALUR PENGOLAHAN DATA TERBUKA</span>
+</div>
+<h2 class="font-title-page text-title-page sm:text-display-lg text-on-surface font-bold mt-3">
+          Cara TalentScope Mengolah Data
+        </h2>
+<p class="mt-4 font-body-default text-body-default text-tertiary">
+          Proses bertahap dari data mentah lowongan pekerjaan hingga menjadi wawasan yang dapat dipahami tanpa asumsi tersembunyi.
+        </p>
+</div>
+<div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tahap 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-container flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-sm mb-4">
+              01
+            </div>
+<h3 class="font-title-section text-title-section text-on-surface font-semibold">Pengumpulan dari Glints</h3>
+<p class="mt-2.5 font-body-compact text-body-compact text-tertiary leading-relaxed">
+              Pengambilan data publik lowongan kerja sektor teknologi di Indonesia yang terindeks secara historis dengan total 1.133 rekaman lowongan unik.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container text-xs font-data-mono text-tertiary">
+<span>Sumber: Requisisi Publik</span>
+</div>
+</div>
+<!-- Tahap 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-container flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center font-bold text-sm mb-4">
+              02
+            </div>
+<h3 class="font-title-section text-title-section text-on-surface font-semibold">Pembersihan &amp; Normalisasi IQR</h3>
+<p class="mt-2.5 font-body-compact text-body-compact text-tertiary leading-relaxed">
+              Standardisasi mata uang (Rupiah), penghapusan duplikasi entri, serta filter outlier ekstrem berbasis 1.5 × rentang interkuartil (IQR) untuk memvalidasi angka gaji.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container text-xs font-data-mono text-tertiary">
+<span>Aturan: 1,5 × IQR Truncation</span>
+</div>
+</div>
+<!-- Tahap 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-container flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-sm mb-4">
+              03
+            </div>
+<h3 class="font-title-section text-title-section text-on-surface font-semibold">Ekstraksi Keterampilan NLP</h3>
+<p class="mt-2.5 font-body-compact text-body-compact text-tertiary leading-relaxed">
+              Parsing teks deskripsi pekerjaan menggunakan kamus keterampilan teknologi terstruktur guna mendeteksi istilah teknis, perangkat, dan framework kerja.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container text-xs font-data-mono text-tertiary">
+<span>Tokenisasi &amp; Entity Matching</span>
+</div>
+</div>
+<!-- Tahap 4 -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-container flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm mb-4">
+              04
+            </div>
+<h3 class="font-title-section text-title-section text-on-surface font-semibold">Agregasi Spark SQL</h3>
+<p class="mt-2.5 font-body-compact text-body-compact text-tertiary leading-relaxed">
+              Pemrosesan terdistribusi untuk menghitung korelasi kemunculan bersama (co-occurrence), pengelompokan posisi, dan pemetaan sebaran per wilayah.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container text-xs font-data-mono text-tertiary">
+<span>Engine: Apache Spark MLlib</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDUKATIF 2: Pratinjau Analisis Pasar & Keterampilan -->
+<section class="w-full bg-surface py-20" id="analisis-keterampilan">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div class="max-w-2xl">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-surface-container text-primary font-metadata-label text-metadata-label font-semibold">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span>EKSPLORASI SAMPEL DATA</span>
+</div>
+<h2 class="font-title-page text-title-page sm:text-display-lg text-on-surface font-bold mt-2">
+            Pratinjau Analisis Pasar &amp; Keterampilan
+          </h2>
+<p class="font-body-default text-body-default text-tertiary mt-2">
+            Matriks kemunculan bersama keterampilan teknis dan distribusi posisi riil yang teramati dalam dataset 1.133 lowongan.
+          </p>
+</div>
+<!-- Segmented View Toggle -->
+<div class="mt-6 md:mt-0 inline-flex bg-surface-container p-1 rounded-lg">
+<button class="tab-btn px-4 py-2 rounded-md font-metadata-label text-metadata-label font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="tabSkillMatrix" onclick="switchPreview('matrix')">Matriks Co-occurrence</button>
+<button class="tab-btn px-4 py-2 rounded-md font-metadata-label text-metadata-label font-semibold text-tertiary hover:text-on-surface transition-all" id="tabPositions" onclick="switchPreview('positions')">Sebaran Posisi Nyata</button>
+</div>
+</div>
+<!-- Display Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-6 sm:p-8 border border-surface-container-low">
+<!-- View 1: Matriks Co-occurrence Keterampilan -->
+<div class="preview-panel block" id="previewMatrix">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 gap-3">
+<div>
+<span class="font-title-section text-title-section text-on-surface font-semibold">Tabel Kemunculan Bersama (Skill Co-occurrence Grid)</span>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-0.5">Persentase peluang munculnya Keterampilan B jika Keterampilan A disyaratkan dalam satu lowongan</p>
+</div>
+<div class="flex items-center space-x-2 font-data-mono text-data-mono text-tertiary text-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Sampel Analisis: n = 1.133 Lowongan</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-compact text-body-compact">
+<thead>
+<tr class="bg-surface-container-low text-tertiary uppercase font-metadata-label text-metadata-label">
+<th class="py-3 px-4 rounded-l">Keterampilan Utama</th>
+<th class="py-3 px-4">SQL</th>
+<th class="py-3 px-4">Python</th>
+<th class="py-3 px-4">Docker</th>
+<th class="py-3 px-4">AWS / Cloud</th>
+<th class="py-3 px-4">React.js</th>
+<th class="py-3 px-4 rounded-r">Total Kemunculan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-on-surface">
+<tr>
+<td class="py-3.5 px-4 font-body-semibold text-body-semibold flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>Python</span>
+</td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-data-mono font-medium">84,2%</span></td>
+<td class="py-3.5 px-4"><span class="px-2 py-1 text-tertiary font-data-mono">—</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">51,8%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">46,3%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">18,4%</span></td>
+<td class="py-3.5 px-4 font-data-mono text-tertiary">512 lowongan</td>
+</tr>
+<tr>
+<td class="py-3.5 px-4 font-body-semibold text-body-semibold flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>SQL</span>
+</td>
+<td class="py-3.5 px-4"><span class="px-2 py-1 text-tertiary font-data-mono">—</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-data-mono font-medium">78,6%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">39,2%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">42,1%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">22,0%</span></td>
+<td class="py-3.5 px-4 font-data-mono text-tertiary">734 lowongan</td>
+</tr>
+<tr>
+<td class="py-3.5 px-4 font-body-semibold text-body-semibold flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Docker / Kontainer</span>
+</td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">58,7%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-data-mono">62,1%</span></td>
+<td class="py-3.5 px-4"><span class="px-2 py-1 text-tertiary font-data-mono">—</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-data-mono font-medium">81,4%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">34,9%</span></td>
+<td class="py-3.5 px-4 font-data-mono text-tertiary">389 lowongan</td>
+</tr>
+<tr>
+<td class="py-3.5 px-4 font-body-semibold text-body-semibold flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span>React.js / Web Frontend</span>
+</td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">31,2%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">14,0%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">28,5%</span></td>
+<td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-data-mono">33,1%</span></td>
+<td class="py-3.5 px-4"><span class="px-2 py-1 text-tertiary font-data-mono">—</span></td>
+<td class="py-3.5 px-4 font-data-mono text-tertiary">418 lowongan</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 font-metadata-label text-metadata-label text-tertiary">
+            Catatan: Persentase dihitung relatif terhadap jumlah lowongan yang mensyaratkan keterampilan pada baris utama.
+          </p>
+</div>
+<!-- View 2: Sebaran Posisi Nyata dalam Dataset -->
+<div class="preview-panel hidden" id="previewPositions">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 gap-3">
+<div>
+<span class="font-title-section text-title-section text-on-surface font-semibold">Klaster Rumpun Posisi dalam Dataset (n = 1.133)</span>
+<p class="font-metadata-label text-metadata-label text-tertiary mt-0.5">Proporsi kelompok pekerjaan setelah normalisasi judul lowongan di Indonesia</p>
+</div>
+<span class="font-metadata-label text-metadata-label bg-surface-container px-3 py-1 rounded text-on-surface-variant font-data-mono">Representasi Sampel Historis</span>
+</div>
+<div class="space-y-5 pt-2">
+<div>
+<div class="flex justify-between font-body-semibold text-body-semibold text-on-surface mb-1.5">
+<span class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span>Rekayasa Perangkat Lunak (Backend, Fullstack, Mobile)</span>
+</span>
+<span class="font-data-mono text-primary font-semibold">462 lowongan (40,8%)</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 40.8%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-body-semibold text-body-semibold text-on-surface mb-1.5">
+<span class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span>Data, Analisis &amp; Rekayasa Data (Data Engineer, Analyst, BI)</span>
+</span>
+<span class="font-data-mono text-secondary font-semibold">324 lowongan (28,6%)</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 28.6%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-body-semibold text-body-semibold text-on-surface mb-1.5">
+<span class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded bg-tertiary"></span>
+<span>Infrastruktur, DevOps &amp; Cloud Support</span>
+</span>
+<span class="font-data-mono text-tertiary font-semibold">188 lowongan (16,6%)</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 16.6%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-body-semibold text-body-semibold text-on-surface mb-1.5">
+<span class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded bg-surface-container-highest border border-tertiary/30"></span>
+<span>QA, Testing &amp; Operasional TI Lainnya</span>
+</span>
+<span class="font-data-mono text-on-surface-variant font-semibold">159 lowongan (14,0%)</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-surface-container-highest h-full rounded-full border border-tertiary/20" style="width: 14.0%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDUKATIF 3 & TRANSPARANSI: Memahami Data yang Digunakan & Transparansi Metodologi -->
+<section class="w-full bg-surface-container-low py-20" id="analisis-pasar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-surface-container-lowest p-8 sm:p-12 rounded-2xl shadow-sm border border-surface-container">
+<div class="max-w-3xl">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-surface-container text-tertiary font-data-mono text-data-mono">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>TRANSPARANSI METODOLOGI &amp; BATASAN ANALISIS</span>
+</div>
+<h2 class="font-title-page text-title-page sm:text-display-lg text-on-surface font-bold mt-4">
+            Memahami Data yang Digunakan &amp; Transparansi Metodologi
+          </h2>
+<p class="mt-4 font-body-default text-body-default text-tertiary leading-relaxed">
+            TalentScope menyajikan data empiris apa adanya tanpa klaim keakuratan mutlak. Kami menyajikan parameter pengolahan dan interpretasi metrik secara jujur dan terbuka.
+          </p>
+</div>
+<div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Parameter 1 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label uppercase text-tertiary font-semibold">Ukuran Sampel Dataset</span>
+<span class="font-title-section text-title-section text-on-surface font-bold block mt-1.5">n = 1.133 Lowongan Glints</span>
+<p class="font-body-compact text-body-compact text-tertiary mt-2.5 leading-relaxed">
+              Diambil dari lowongan daring sektor teknologi yang terindeks di Indonesia. Data ini mencerminkan sampel historis yang tersedia, bukan sensus lengkap seluruh industri.
+            </p>
+</div>
+<!-- Parameter 2 (K-Means & Silhouette Note) -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label uppercase text-tertiary font-semibold">Klastering K-Means Spark MLlib (k = 3)</span>
+<span class="font-title-section text-title-section text-primary font-bold block mt-1.5">Silhouette Score: 0,0351</span>
+<p class="font-body-compact text-body-compact text-tertiary mt-2.5 leading-relaxed">
+              Skor evaluasi klaster bernilai 0,0351. <strong class="text-on-surface font-medium">Catatan Metodologis:</strong> Skor rendah ini menandakan batas pemisahan klaster yang lemah pada representasi teks ini, bukan pemisahan mutlak antar peran kerja.
+            </p>
+</div>
+<!-- Parameter 3 (Kompensasi) -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container">
+<span class="font-metadata-label text-metadata-label uppercase text-tertiary font-semibold">Validasi Kompensasi (IQR)</span>
+<span class="font-title-section text-title-section text-secondary font-bold block mt-1.5">Filter 1,5 × IQR</span>
+<p class="font-body-compact text-body-compact text-tertiary mt-2.5 leading-relaxed">
+              Rata-rata gaji minimum terlapor ~Rp5,19 juta/bulan dan maksimum ~Rp7,33 juta/bulan dihitung khusus dari lowongan yang menyertakan informasi gaji terverifikasi.
+            </p>
+</div>
+</div>
+<!-- Methodological Note Box -->
+<div class="mt-8 p-5 rounded-lg bg-surface-container border border-surface-container-high flex flex-col md:flex-row md:items-start justify-between text-on-surface-variant font-body-compact text-body-compact gap-4">
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div>
+<span class="font-body-semibold text-body-semibold text-on-surface block">Batasan Penggunaan Data</span>
+<p class="text-tertiary text-xs sm:text-sm mt-0.5 leading-relaxed">
+                Platform ini berfungsi sebagai sarana studi eksploratif dan tolok ukur referensi. Informasi tidak dapat dijadikan sebagai acuan hukum mutlak atau jaminan ketersediaan upah kerja riil di setiap instansi.
+              </p>
+</div>
+</div>
+<a class="inline-flex items-center space-x-1.5 text-primary hover:underline font-body-semibold text-sm shrink-0 self-start md:self-center" href="#metodologi-data">
+<span>Pelajari Selengkapnya</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Edukasi Konteks Indonesia -->
+<section class="w-full bg-surface-container-lowest py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-6 relative">
+<div class="rounded-2xl overflow-hidden shadow-md aspect-4/3 relative">
+<img class="w-full h-full object-cover" data-alt="High precision modern corporate workspace with financial quantitative researchers and data engineers reviewing multiple screens with analytics graphs, ambient teal and slate lighting, hyper-realistic, documentary enterprise photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN1X7xA5WXq6AE9kV_EMCuEy6jYtbtNmP5cIuqpWVfMcUxphuSLjhG713QwwIdBrf7GkgCWWn32vAkiHfJtWCE54q0oBjcXTpPldRovuPn3Qz8g5PiQ0yahkz3LImBMSZjnElddigKfzMmKXuEfc8JGVNzkeinJWLu1okUoSzDcxWOY6ndA1i49QPR6sumX9ORbyj8WGnf6nWcAFSQvDhgiKZEN6vq4O7yXqegCwW5j-2M7fXV7FuPWA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-on-primary">
+<span class="px-2.5 py-1 rounded bg-primary text-on-primary font-metadata-label text-metadata-label font-semibold">Laboratorium Analisis Glints</span>
+<p class="mt-2 font-body-compact text-body-compact text-surface-container-highest">Analisis kuantitatif berbasis pengelompokan teks deskripsi pekerjaan di sektor digital Indonesia.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-5">
+<span class="font-metadata-label text-metadata-label uppercase text-primary font-semibold tracking-wider">Wawasan Berbasis Fakta</span>
+<h2 class="font-title-page text-title-page sm:text-[32px] sm:leading-[40px] text-on-surface font-bold">
+            Menghilangkan Kebingungan dalam Menilai Tren Kebutuhan Keahlian
+          </h2>
+<p class="font-body-default text-body-default text-tertiary leading-relaxed">
+            Sering kali pencari kerja dan praktisi hanya mengandalkan persepsi populer mengenai keterampilan yang paling dicari. Melalui pemetaan dataset 1.133 lowongan, TalentScope membantu Anda melihat hubungan nyata antara teknologi yang sering diminta bersamaan oleh pemberi kerja di Indonesia.
+          </p>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-container">
+<span class="font-display-lg text-title-page text-primary font-bold">1.133</span>
+<span class="block font-metadata-label text-metadata-label text-tertiary mt-1 font-medium">Lowongan Unik Teranalisis</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-container">
+<span class="font-display-lg text-title-page text-secondary font-bold">~Rp5,19 – 7,33 jt</span>
+<span class="block font-metadata-label text-metadata-label text-tertiary mt-1 font-medium">Rentang Gaji Rata-rata Terlapor</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Edukatif (Tanpa Monetisasi) -->
+<section class="w-full bg-primary py-16 text-on-primary relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-metadata-label text-metadata-label uppercase text-primary-fixed tracking-widest font-semibold">Eksplorasi Publik Bebas Akses</span>
+<h2 class="font-title-page text-title-page sm:text-display-lg font-bold mt-2">
+          Mulai Telusuri Hubungan Keterampilan dan Lowongan Sekarang
+        </h2>
+<p class="mt-3 font-body-default text-body-default text-surface-container-low max-w-xl">
+          Gunakan data historis yang telah diolah untuk merencanakan pengembangan keahlian dan memahami peta kebutuhan rekayasa teknologi di Indonesia.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+<a class="px-7 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-semibold text-body-semibold shadow-md hover:bg-surface-container-low transition-all text-center" href="#jelajahi-lowongan">
+          Cari Lowongan
+        </a>
+<a class="px-6 py-3 rounded-lg bg-primary-container text-on-primary font-body-semibold text-body-semibold hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all text-center border border-primary-fixed-dim/30" href="#analisis-keterampilan">
+          Lihat Analisis Pasar
+        </a>
+</div>
+</div>
+</section>
+<!-- Footer Lokalisasi Penuh -->
+<footer class="w-full bg-surface-container-lowest py-16 border-t border-surface-container-low">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<!-- Logo & Penjelasan -->
+<div class="space-y-4">
+<img alt="Logo TalentScope" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UH793mZRa7ERP0Vtb26XIakrhWPdAEArOttmZ0C8VaIwpLjITaDeYjfievRJP6bQFhJtUygeOQ3JBCWgbmu6I3W65CTtd4zi7WHYMODa6ISjVwPu0PU8CoxGjc7Q1iTxayYNYhPRtzSCCv2kuReua_Znf0uTK1k0E5gfTeYzrePibg2BV4Zdc5c6-CshGjHWF1mO2l8TeOUyeG5EVJcyR38O0WoOKlg8qxZvaV7MEbu4gOEIuNdRXYmK6b"/>
+<p class="font-body-compact text-body-compact text-tertiary max-w-sm leading-relaxed">
+            Platform eksplorasi pasar kerja berbasis data lowongan publik teknologi di Indonesia. Berfokus pada transparansi analitis dan keterbukaan metodologi.
+          </p>
+<div class="pt-1 flex items-center space-x-2 font-data-mono text-data-mono text-tertiary text-xs">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span>Dataset Analisis: 1.133 Posisi Glints</span>
+</div>
+</div>
+<!-- Navigasi Utama -->
+<div>
+<span class="font-body-semibold text-body-semibold text-on-surface block mb-3">Navigasi Utama</span>
+<ul class="space-y-2 font-body-compact text-body-compact text-tertiary">
+<li><a class="hover:text-primary transition-colors" href="#jelajahi-lowongan">Jelajahi Lowongan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#analisis-pasar">Analisis Pasar</a></li>
+<li><a class="hover:text-primary transition-colors" href="#analisis-keterampilan">Analisis Keterampilan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Metodologi Data</a></li>
+</ul>
+</div>
+<!-- Informasi Metodologi -->
+<div>
+<span class="font-body-semibold text-body-semibold text-on-surface block mb-3">Transparansi Data</span>
+<ul class="space-y-2 font-body-compact text-body-compact text-tertiary">
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Tahap Pengolahan Spark</a></li>
+<li><a class="hover:text-primary transition-colors" href="#analisis-pasar">K-Means &amp; Silhouette Score</a></li>
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Filter Outlier 1,5 × IQR</a></li>
+<li><a class="hover:text-primary transition-colors" href="#analisis-keterampilan">Matriks Keterampilan Nyata</a></li>
+</ul>
+</div>
+<!-- Catatan Kebijakan & Privasi -->
+<div>
+<span class="font-body-semibold text-body-semibold text-on-surface block mb-3">Informasi Terkait</span>
+<ul class="space-y-2 font-body-compact text-body-compact text-tertiary">
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Batasan &amp; Disclaimer Data</a></li>
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Kebijakan Penggunaan Terbuka</a></li>
+<li><a class="hover:text-primary transition-colors" href="#metodologi-data">Dokumentasi Skema Data</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-tertiary font-metadata-label text-metadata-label">
+<p>© 2024 TalentScope. Inisiatif Wawasan Pasar Kerja Terbuka. Semua data disajikan untuk tujuan edukasi &amp; analisis.</p>
+<div class="mt-4 sm:mt-0 flex items-center space-x-4">
+<span>Jakarta</span>
+<span>•</span>
+<span>Bandung</span>
+<span>•</span>
+<span>Indonesia</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+    // Preview tab switcher
+    function switchPreview(panel) {
+      const isMatrix = panel === 'matrix';
+      const matrixPanel = document.getElementById('previewMatrix');
+      const positionsPanel = document.getElementById('previewPositions');
+      const tabMatrix = document.getElementById('tabSkillMatrix');
+      const tabPositions = document.getElementById('tabPositions');
+
+      if (isMatrix) {
+        matrixPanel.classList.remove('hidden');
+        matrixPanel.classList.add('block');
+        positionsPanel.classList.add('hidden');
+        positionsPanel.classList.remove('block');
+
+        tabMatrix.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        tabMatrix.classList.remove('text-tertiary');
+        tabPositions.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        tabPositions.classList.add('text-tertiary');
+      } else {
+        positionsPanel.classList.remove('hidden');
+        positionsPanel.classList.add('block');
+        matrixPanel.classList.add('hidden');
+        matrixPanel.classList.remove('block');
+
+        tabPositions.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        tabPositions.classList.remove('text-tertiary');
+        tabMatrix.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        tabMatrix.classList.add('text-tertiary');
+      }
+    }
+
+    // Interactive Skill Tag Toggle
+    document.querySelectorAll('.skill-tag').forEach(tag => {
+      tag.addEventListener('click', function() {
+        const isSelected = this.classList.contains('bg-primary-fixed');
+        const icon = this.querySelector('.material-symbols-outlined');
+        if (isSelected) {
+          this.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+          this.classList.add('bg-surface-container', 'text-on-surface-variant');
+          if (icon) icon.textContent = 'add';
+        } else {
+          this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          this.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+          if (icon) icon.textContent = 'check';
+        }
+      });
+    });
+
+    // Search Lowongan Feedback
+    const searchBtn = document.getElementById('triggerSearch');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', function() {
+        const originalHtml = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[19px] animate-spin">refresh</span><span>Mencari...</span>';
+        setTimeout(() => {
+          this.innerHTML = originalHtml;
+          const target = document.getElementById('analisis-keterampilan');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+      });
+    }
+  </script>
+</div></main></body></html>

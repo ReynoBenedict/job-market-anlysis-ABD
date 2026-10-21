@@ -1,0 +1,29 @@
+[
+  {
+    "id": "synthetic-0001",
+    "text": "Backend Engineer (Go)",
+    "categories": {"location": "Jakarta Selatan, DKI Jakarta", "commitment": "Full-time", "team": "Engineering"},
+    "workplaceType": "hybrid",
+    "salaryRange": {"currency": "IDR", "interval": "per-month-salary", "min": 15000000, "max": 25000000},
+    "hostedUrl": "https://jobs.lever.co/example-company/synthetic-0001",
+    "createdAt": 1781481600000,
+    "descriptionPlain": "Synthetic fixture description."
+  },
+  {
+    "id": "synthetic-0002",
+    "text": "Data Analyst",
+    "categories": {"location": "Remote", "commitment": "Contract"},
+    "workplaceType": "remote",
+    "salaryRange": {"currency": "IDR", "interval": "per-year-salary", "min": 120000000, "max": 180000000},
+    "hostedUrl": "https://jobs.lever.co/example-company/synthetic-0002",
+    "createdAt": 1781568000000
+  },
+  {
+    "id": "synthetic-0003",
+    "text": "Customer Success Associate",
+    "categories": {"location": "Bandung", "commitment": "Internship"},
+    "workplaceType": "onsite",
+    "hostedUrl": "javascript:alert(1)",
+    "createdAt": 1781654400000
+  }
+]

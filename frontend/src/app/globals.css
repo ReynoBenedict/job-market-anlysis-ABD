@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens from the Stitch "Executive Market Intelligence ID" system
+ * (docs/design/stitch/executive_market_intelligence_id/DESIGN.md).
+ * Deviation: muted text uses #64748B instead of #94A3B8, which fails WCAG AA for
+ * small text on white; #94A3B8 is kept for placeholders and decorative strokes only.
+ */
+@theme {
+  --color-canvas: #f8fafc;
+  --color-card: #ffffff;
+  --color-sunken: #f1f5f9;
+  --color-line: #e2e8f0;
+  --color-line-strong: #cbd5e1;
+  --color-ink: #0f172a;
+  --color-ink-2: #475569;
+  --color-ink-3: #64748b;
+  --color-ink-4: #94a3b8;
+  --color-navy: #132238;
+  --color-teal: #0d8074;
+  --color-teal-hover: #0b6a61;
+  --color-teal-text: #0f766e;
+  --color-teal-wash: #f0fdfa;
+  --color-teal-line: #ccfbf1;
+  --color-blue: #1d4ed8;
+  --color-blue-wash: #eff6ff;
+  --color-blue-line: #dbeafe;
+  --color-warn: #b45309;
+  --color-warn-wash: #fffbeb;
+  --color-warn-line: #fde68a;
+  --color-danger: #b91c1c;
+  --color-danger-wash: #fef2f2;
+  --color-danger-line: #fecaca;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04);
+  --shadow-raised: 0 4px 6px -1px rgb(15 23 42 / 0.06), 0 2px 4px -2px rgb(15 23 42 / 0.04);
+  --shadow-float: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.03);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    /* Anchor targets (#konten, /metodologi#…) land below the 64px sticky header. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 2px;
+  }
+
+  /* The skip link moves focus to <main tabindex="-1">; a ring around the whole page
+     content would be noise, the next Tab lands on the first control as usual. */
+  main[tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: var(--color-ink-4);
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility card {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}

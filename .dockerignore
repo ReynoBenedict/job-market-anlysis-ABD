@@ -1,0 +1,15 @@
+# Context for backend/Dockerfile (repository root). Only backend/, data/raw and
+# docs/research are copied; exclude everything heavy or local.
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+frontend
+legacy
+.git
+.idea
+.env*
+*.zip
+docs/design
+docs/academic

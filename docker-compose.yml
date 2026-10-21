@@ -1,0 +1,55 @@
+name: talentscope
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: talentscope
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-talentscope}
+      POSTGRES_DB: talentscope
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U talentscope -d talentscope"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://talentscope:${POSTGRES_PASSWORD:-talentscope}@db:5432/talentscope
+      ADMIN_API_TOKEN: ${ADMIN_API_TOKEN:-}
+      CORS_ORIGINS: http://localhost:${WEB_PORT:-3001}
+      LOG_FORMAT: json
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${API_PORT:-8010}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: frontend
+    environment:
+      API_BASE_URL: http://api:8000
+      ADMIN_API_TOKEN: ${ADMIN_API_TOKEN:-}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-3001}:3000"
+
+volumes:
+  pgdata:

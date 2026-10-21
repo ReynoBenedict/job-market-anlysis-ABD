@@ -1,30 +1,44 @@
 # Python
 __pycache__/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Virtual Environment
+# Virtual environments
 .venv/
 venv/
 env/
 
-# IDE
+# Node (frontend/.gitignore and video/.gitignore cover the rest)
+node_modules/
+
+# Environment files: templates are committed, real ones are not
+.env
+.env.*
+!.env.example
+
+# IDE and OS
 .idea/
 .vscode/
-
-# Logs
-*.log
-scraper.log
-
-# Cache
-.pytest_cache/
-.cache/
-
-# Selenium / WebDriver Manager
-.wdm/
-
-# Environment Variables
-.env
-
-# Windows
+.DS_Store
 Thumbs.db
 Desktop.ini
+
+# Logs, caches, temporary files
+*.log
+.cache/
+*.tmp
+*.bak
+
+# Selenium / WebDriver Manager (legacy scraper)
+.wdm/
+
+# Local data lake (Parquet); rebuilt or re-collected, never committed
+/lake/
+
+# Promo video project (Remotion source, assets, renders); kept local only
+/video/
